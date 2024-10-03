@@ -1,0 +1,89 @@
+.blocks .block.block--resources {
+	padding: 60px 0 110px 0;
+    background-image: linear-gradient(46deg, #B60073 0%, #6100FF 54%, #00A2FF 100%);
+
+    .container {
+        @include media-breakpoint-up(md) {
+            max-width: map-get($container-max-widths, 'md') !important;
+        }
+        @include media-breakpoint-up(lg) {
+            max-width: map-get($container-max-widths, 'lg') !important;
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: map-get($container-max-widths, 'xl') !important;
+        }
+    }
+    
+    .resources__headline {
+        margin: 0 0 40px 0;
+        color: #C7EFFF;
+        font-size: 1.75rem;
+        font-weight: bold;
+        text-align: center;
+        
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 60px;
+            font-size: 2.1875rem;
+        }
+    }
+    
+    .resources__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        li {
+            width: 100%;
+            
+            &:not(.placeholder) {
+                margin-bottom: 20px;
+            }
+            
+            @include media-breakpoint-up(md) {
+                width: calc(50% - 12px);
+            }
+            
+            @include media-breakpoint-up(lg) {
+                width: calc(33.33333% - 14px);
+            }
+            
+            .resource {
+                display: flex;
+                background: #fff;
+                box-shadow: 0 9px 23px rgba(0, 0, 0, .25);
+                position: relative;
+                top: 0;
+                
+                .resource__icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: 76px;
+                    max-width: 76px;
+                    min-height: 76px;
+                    background: $royal;
+                    color: #fff;
+                    font-size: 1.4rem;
+                }
+                
+                .resource__info {
+                    padding: 15px;
+                    color: $dark-blue;
+                    font-weight: bold;
+                }
+                
+                &.resource--file .resource__icon {
+                    background: $purple;
+                }
+            }
+            
+            a.resource:hover {
+                background: $gray-100;
+                top: -5px;
+            }
+        }
+    }
+}

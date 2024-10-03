@@ -1,0 +1,141 @@
+.app-header {
+  width: 100%;
+  padding: 21px 0;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: $zindex-fixed;
+
+  @media (min-width: 1180px) {
+    padding: 11px 0;
+  }
+
+  body.admin-bar & {
+    top: 32px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+  }
+
+  .logo {
+    display: block;
+    width: 247px;
+    height: 27px;
+    margin-top: -4px;
+    background: url(./assets/img/logo-vpc.png) no-repeat;
+    background-size: contain;
+
+    @media (min-width: 1180px) {
+      width: 302px;
+      height: 33px;
+    }
+  }
+
+  .nav-icon {
+    display: block;
+    padding: 0;
+    border: none;
+    background: none;
+
+    @media (min-width: 1180px) {
+      display: none;
+    }
+
+    svg {
+      width: 34px;
+      height: 26px;
+      transition: all 0.25s;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover svg {
+      transform: scale(1.1);
+    }
+  }
+
+  nav {
+    display: none;
+
+    @media (min-width: 1180px) {
+      display: block;
+    }
+
+    & > ul.nav {
+      align-items: center;
+
+      & > li {
+        position: relative;
+
+        & > a {
+          padding: 0.5rem 0.75rem;
+          color: $darker-blue;
+          font-size: 0.9rem;
+          font-weight: bold;
+
+          @include media-breakpoint-up(xl) {
+            font-size: 0.95rem;
+          }
+        }
+
+        &.current-menu-item > a,
+        &:hover > a {
+          color: $royal;
+        }
+
+        &:hover ul.sub-menu {
+          display: block;
+        }
+
+        &.nav-item__register {
+          margin-left: 0.5rem;
+
+          a {
+            padding: 0.01rem 0.75rem 0.1rem 0.75rem;
+            border: 2px solid $purple;
+            border-radius: 18.5px;
+            color: #002f88;
+            font-size: 0.9rem;
+
+            @include media-breakpoint-up(xl) {
+              font-size: 0.95rem;
+            }
+
+            &:hover {
+              background: $purple;
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      ul.sub-menu {
+        display: none;
+        position: absolute;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background: #fff;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
+
+        a {
+          display: block;
+          min-width: 200px;
+          color: $darker-blue;
+
+          &:hover {
+            color: $royal;
+          }
+        }
+      }
+    }
+  }
+}

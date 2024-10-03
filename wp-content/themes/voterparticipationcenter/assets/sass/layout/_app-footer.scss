@@ -1,0 +1,194 @@
+.app-footer {
+    
+    .app-footer__upper {
+        padding: 70px 0;
+        
+        @media (min-width: 1060px) {
+            padding: 102px 0;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            @media (min-width: 1060px) {
+                flex-direction: row;
+            }
+        }
+        
+        .upper__logo {
+            display: block;
+            width: 250px;
+            height: 45px;
+            margin-bottom: 30px;
+            background: url(./assets/img/logo-vpc-stacked.png) no-repeat;
+            background-size: contain;
+            
+            @media (min-width: 1060px) {
+                min-width: 248px;
+                width: 248px;
+                height: 44px;
+                margin: 0 2.5rem 0 0;
+            }
+        }
+        
+        .upper__btn-register {
+            color: #fff;
+            font-weight: bold;
+            padding: .2rem 1.25rem .35rem 1.25rem;
+            border-radius: 20px;
+            white-space: nowrap;
+            line-height: 1;
+            
+            &:hover { background: $dark-blue; }
+        }
+        
+        .upper__nav {
+            margin-bottom: 30px;
+            
+            ul.nav {
+                display: block;
+                columns: 2;
+            }
+            
+            .nav-item {
+                margin-bottom: 7px;
+            }
+            
+            .nav-link {
+                padding: .05rem 1rem;
+                color: $royal;
+                font-weight: bold;
+                line-height: 1.2;
+                white-space: nowrap;
+                
+                &:hover { color: $dark-blue; }
+            }
+            
+            @include media-breakpoint-up(md) {
+                ul.nav { columns: 3; }
+            }
+            
+            @media (min-width: 1060px) {
+                margin: 0 2.5rem 0 0;
+                ul.nav { columns: 2; }
+            }
+            
+            @include media-breakpoint-up(xl) {
+                margin: 0;
+                padding-right: 15px;
+                ul.nav { columns: 3; }
+            }
+        }
+        
+        .upper__social {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0 0 0;
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            
+            li {
+                margin: 0 .2rem;
+                
+                a {
+                    color: $gray-500;
+                    &:hover {
+                        color: $purple;
+                    }
+                }
+            }
+            
+            @media (min-width: 1060px) {
+                margin: 0 0 0 2.5rem;
+            }
+        }
+    }
+    
+    .app-footer__lower {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        background: $darker-blue;
+        position: relative;
+        color: #fff;
+        font-size: .75rem;
+        
+        @media (min-width: 1060px) {
+            height: 64px;
+            padding: 10px 0;
+        }
+        
+        &:after {
+            content: "";
+            display: none;
+            width: 199px;
+            height: 116px;
+            background: url(./assets/img/footer-bug.png) no-repeat;
+            background-size: contain;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+                        
+            @media (min-width: 1060px) {
+                display: block;
+            }
+        }
+
+        a {
+            color: #fff;
+            
+            &:hover {
+                opacity: .5;
+            }
+        }
+        
+        .lower__info {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            
+            @media (min-width: 1060px) {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+                
+            .info__west {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                @media (min-width: 1060px) {
+                    justify-content: flex-start;
+                }
+                
+                .nav {
+                    .nav-item {
+                        margin-right: 1rem;
+                    }
+                    
+                    .nav-link {
+                        padding: .05rem;
+                    }
+                }
+            }
+            
+            .info__east {
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+                margin-bottom: 0;
+                
+                @media (min-width: 1060px) {
+                    justify-content: flex-end;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+.faqs {
+    .faq {
+        padding: 20px;
+        margin-bottom: 10px;
+        background: $gray-100;
+        
+        @include media-breakpoint-up(lg) {
+            padding: 30px;
+        }
+        
+        &__question {
+            margin: 0;
+            padding-right: 1.25em;
+            color: $primary;
+            font-size: 1.25rem;
+            font-weight: bold;
+            position: relative;
+            cursor: pointer;
+            
+            @include media-breakpoint-up(lg) {
+                font-size: 1.5rem;
+            }
+            
+            &:after {
+                content: "";
+                display: block;
+                width: 17px;
+                height: 10px;
+                background-image: url("data:image/svg+xml,%3Csvg width='17px' height='10px' viewBox='0 0 17 10' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpolygon fill='%237489B8' transform='translate(8.455000, 4.941522) rotate(-90.000000) translate(-8.455000, -4.941522) ' points='4 4.94142076 4.75133237 5.8144883 10.8465111 12.8830435 12.91 11.1369421 7.56622135 4.94152174 12.91 -1.25389857 10.8465111 -3 4.75133237 4.06855518'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E");
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                transform-origin: top center;
+                transition: transform .25s;
+            }
+            
+            &[aria-expanded="true"]:after {
+                transform: scaleY(-1) translateY(-50%);
+            }
+            
+            &:hover { color: darken($primary, 10%); }
+        }
+        
+        &__answer {
+            margin-top: 15px;
+        }
+    }
+}
+
+.faqs-banner-contact {
+    padding: 100px 0;
+    background: $darker-blue;
+    color: $bright-green;
+    text-align: center;
+    
+    &__headline {
+        font-size: 1.375rem;
+        font-weight: bold;
+        
+        .headline__looking-for {
+            display: block;
+            width: 300px;
+            height: 41px;
+            margin: 8px auto 0 auto;
+            background: url(./assets/img/looking-for.svg) no-repeat;
+            background-size: contain;
+            
+            @include media-breakpoint-up(lg) {
+                width: 401px;
+                height: 55px;
+            }
+        }
+    }
+}

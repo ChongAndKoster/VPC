@@ -1,0 +1,28 @@
+body.page-template-default .app-main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    
+    // Default container max-width
+    .container {
+        max-width: $post-max-width;
+    }
+
+    .page__header {
+        padding-top: 40px;
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 80px;
+        }
+    }
+
+    .page__headline {
+        font-size: 2.125rem;
+        font-weight: bold;
+        line-height: 1.1;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 2.75rem;
+        }
+    }
+}

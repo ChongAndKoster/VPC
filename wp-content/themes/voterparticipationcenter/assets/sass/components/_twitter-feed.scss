@@ -1,0 +1,165 @@
+.twitter-row {
+    background-color: #001969;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      padding: 4rem 1rem;
+    }
+    h2 {
+      color: #8ED8F8;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      font-size: 1.75rem;
+      text-align: center;
+      @media screen and (min-width: 768px) {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+      @media screen and (min-width: 1440px) {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+
+.swiper-container {
+    width: 100%;
+    max-width: 1536px;
+    margin: 0 auto;
+    .swiper-wrapper {
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+      .card {
+        text-align: left;
+        position: relative;
+        background-color: white;
+        width: 13rem;
+        height: 16rem;
+        border-radius: 20px;
+        border-width: 0px;
+        color: black;
+        overflow: hidden;
+        transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
+        &:hover {
+          transform: scale(1.05);
+          box-shadow:
+  0 0.7px 2.2px -8px rgba(0, 0, 0, 0.02),
+  0 1.6px 5.3px -8px rgba(0, 0, 0, 0.028),
+  0 3px 10px -8px rgba(0, 0, 0, 0.035),
+  0 5.4px 17.9px -8px rgba(0, 0, 0, 0.042),
+  0 10px 33.4px -8px rgba(0, 0, 0, 0.05),
+  0 24px 80px -8px rgba(0, 0, 0, 0.07)
+;
+        }
+        @media screen and (min-width: 768px) {
+          width: 16rem;
+          height: 20rem;
+        }
+        @media screen and (min-width: 1280px) {
+          width: 19rem;
+          height: 21rem;
+        }
+        &__image {
+          position: relative;
+          top: 0;
+          left: 50%;
+          height: 200px;
+          transform: translateX(-50%);
+          width: 332px;
+          object-fit: cover;
+          object-position: center;
+        }
+        &__text {
+          padding: .5rem 1rem;
+          &--no-image {
+            padding: 1.5rem 1rem;
+            @media screen and (min-width: 768px) {
+            padding: 2rem 1rem;
+              }
+            .card__headline {
+              color: #939598;
+              font-size: 1rem;
+              @media screen and (min-width: 768px) {
+              font-size: 1.2rem;
+              }
+              margin-bottom: .75rem;
+              .account {
+                color: #009AFF;
+                font-weight: bold;
+              }
+            }
+            .card__description {
+              color: black;
+              display: -webkit-box;
+              -webkit-line-clamp: 8;
+              -webkit-box-orient: vertical; 
+              overflow: hidden;
+              font-size: .75rem;
+              @media screen and (min-width: 768px) {
+                font-size: 1rem;
+                }
+            }
+            .card__link {
+              position: absolute;
+              bottom: 16px;
+              left: 16px;
+              color: white;
+              background-color: #009AFF;
+              font-weight: bold;
+              border-radius: 15px;
+              padding: 0.5rem 1rem;
+              transition: background-color ease-in-out 0.3s;
+              &:hover {
+                background-color: #001969;
+              }
+            }
+          }
+          .card__headline {
+            color: #939598;
+            font-size: 1rem;
+            @media screen and (min-width: 768px) {
+              font-size: 1.2rem;
+              }
+            margin-bottom: .75rem;
+            .account {
+              color: #009AFF;
+              font-weight: bold;
+            }
+          }
+          .card__description {
+            color: black;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+          .card__link {
+            position: absolute;
+            bottom: 2px;
+            left: 0px;
+            color: white;
+            background-color: #009AFF;
+            border-radius: 15px;
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
+    }
+    }
+   
+    .swiper-button-prev {
+      color: #8ED8F8;
+      left: 0;
+    }
+    .swiper-button-next {
+      color: #8ED8F8;
+      right: 0;
+    }
+  }

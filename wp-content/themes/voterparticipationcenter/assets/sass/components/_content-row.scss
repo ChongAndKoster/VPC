@@ -1,0 +1,18 @@
+.content-row {
+    min-height: 400px;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    
+    &--bright-green {
+        background: $bright-green;
+    }
+    
+    @include media-breakpoint-up(md) {
+        min-height: 500px;
+    }
+        
+    .container {
+        max-width: 580px;
+    }
+}

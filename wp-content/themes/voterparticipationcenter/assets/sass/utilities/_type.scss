@@ -1,0 +1,72 @@
+
+/**
+ * Font Sizes 
+ * Generates font-size classes. Example: .fs-8 = .8rem
+ */
+@for $s from 8 through 20 {
+    .fs-#{$s} {
+        font-size: ($s * .1) + rem !important;
+    }
+}
+
+.screen-reader-text {
+    @extend .sr-only;
+}
+
+a {
+    transition: all .25s;
+    
+    &.disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+}
+
+h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+h2, .h2 {
+    @include media-breakpoint-down(sm) {
+        font-size: 2.75rem;
+    }
+}
+
+h3, .h3 {
+    @include media-breakpoint-down(sm) {
+        font-size: 2.25rem;
+    }
+}
+
+h4, .h4 {
+    @include media-breakpoint-down(sm) {
+        font-size: 1.75rem;
+    }
+}
+
+h5, .h5 {
+    @include media-breakpoint-down(sm) {
+        font-size: 1.25rem;
+    }
+}
+
+// Alternate headline style
+h2.is-style-alt {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h3.is-style-alt {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.lead {
+    font-size: 1.25rem;
+    
+    @include media-breakpoint-up(lg) {
+        font-size: 1.625rem;;
+    }
+}

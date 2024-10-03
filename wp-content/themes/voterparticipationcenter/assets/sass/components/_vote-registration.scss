@@ -1,0 +1,82 @@
+.vote-registration {
+    padding: 50px 0;
+    // background-image: 
+    //     url(./assets/img/register-to-vote-background.png),
+    //     url(./assets/img/register-to-vote-middleground.png),
+    //     url(./assets/img/register-to-vote-foreground.png),
+    //     linear-gradient(316deg, #d30045 0%, #6100FF 65%, #00A2FF 100%);
+    // background-repeat: no-repeat, no-repeat, no-repeat;
+    // background-position: center 90%, center 100%, center center;
+    background-image: 
+        url(./assets/img/pin-pattern.png),
+        linear-gradient(316deg, #d30045 0%, #6100FF 65%, #00A2FF 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center 100%, center center;
+    background-size: cover, cover;
+    
+    @include media-breakpoint-up(md) {
+        padding: 100px 0;
+    }
+    
+    &--gray-bkgd {
+        background: $gray-100;
+        
+        .vote-registration__headline {
+            color: $royal;
+        }
+    }
+    
+    &__headline {
+        margin: 0 0 40px 0;
+        color: #fff;
+        font-size: 2.25rem;
+        font-weight: bold;
+        line-height: 1.1;
+        text-align: center;
+        
+        @include media-breakpoint-up(md) {
+            font-size: 4rem;
+        }
+    }
+    
+    &__content {
+        max-width: 712px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: $border-radius;
+        
+        .content__header {
+            padding: 20px;
+            background: $darker-blue;
+            border-radius: 4px 4px 0 0;
+            color: #fff;
+            
+            @include media-breakpoint-up(md) {
+                padding: 30px 80px;
+            }
+            
+            p { margin: 0 0 10px 0; }
+            p:last-child { margin-bottom: 0; }
+        }
+        
+        .content__form {
+            padding: 0 20px 20px 20px;
+            position: relative;
+            
+            #spinner {
+                position: absolute;
+                top: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            iframe {
+                height: 800px;
+            }
+            
+            @include media-breakpoint-up(md) {
+                padding: 0 50px 50px 50px;
+            }
+        }
+    }
+}

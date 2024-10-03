@@ -1,0 +1,94 @@
+/*!
+Theme Name: Voter Participation Center 2020
+Author: Actual Size Creative
+Author URI: https://actualsize.com
+Version: 1.0.0
+*/
+
+// Fonts
+@import "fonts";
+
+// Override Default Bootstrap Variables
+@import "custom";
+
+// Bootstrap defaults
+@import "~bootstrap/scss/bootstrap";
+
+// Vendor
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css");
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";
+
+// Layout
+@import "layout/app-header";
+@import "layout/app-main";
+@import "layout/app-footer";
+
+// Components
+@import "components/animation-banner";
+@import "components/blog";
+@import "components/blog-post-cards";
+@import "components/faqs";
+@import "components/button-groups";
+@import "components/buttons";
+@import "components/check-registration";
+@import "components/color-banner";
+@import "components/contact-tabs";
+@import "components/container";
+@import "components/content-row";
+@import "components/donate";
+@import "components/forms";
+@import "components/gradient-banner";
+@import "components/hero-banner";
+@import "components/hero-image-banner";
+@import "components/image-banner";
+@import "components/image-blocks";
+@import "components/image-carousel";
+@import "components/info-blocks";
+@import "components/leadership";
+@import "components/my-vote";
+@import "components/nav-tabs";
+@import "components/page";
+@import "components/pagination";
+@import "components/partners";
+@import "components/research";
+@import "components/restore-your-vote";
+@import "components/share-links";
+@import "components/share-row";
+@import "components/single";
+@import "components/slideout-nav";
+@import "components/stat-cards";
+@import "components/testimonials-carousel";
+@import "components/text-banner";
+@import "components/three-cards";
+@import "components/twitter-feed";
+@import "components/unsubscribe-form";
+@import "components/vote-registration";
+@import "components/voter-congress-stats";
+@import "components/voter-info";
+@import "components/voter-info-embedded";
+@import "components/vote-by-mail";
+@import "components/voter-registration-blocks";
+
+@import "components/blocks/button";
+@import "components/blocks/callout";
+@import "components/blocks/heading";
+@import "components/blocks/image";
+@import "components/blocks/paragraph";
+@import "components/blocks/photo-callout";
+@import "components/blocks/resources";
+@import "components/blocks/serif-callout";
+@import "components/blocks/video";
+
+@import "pages/404";
+@import "pages/register-bday-a";
+@import "pages/register-bday-b";
+
+// Utilities
+@import "utilities/animation";
+@import "utilities/colors";
+@import "utilities/media";
+@import "utilities/rich-text";
+@import "utilities/print";
+@import "utilities/sizing";
+@import "utilities/type";

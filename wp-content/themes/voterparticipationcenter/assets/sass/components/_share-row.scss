@@ -1,0 +1,33 @@
+.share-row {
+    padding: 95px 0 80px 0;
+    background: $gray-100;
+    color: $royal;
+    text-align: center;
+    
+    &__headline {
+        margin: 0 0 10px 0;
+        font-size: 1.1rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        
+        .headline__graphic {
+            display: block;
+            width: 248px;
+            height: 25px;
+            margin: 8px auto 0 auto;
+            background: url(./assets/img/spread-the-word.svg) no-repeat;
+            background-size: contain;
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: 1.25rem;
+        }
+    }
+
+    &__sharing {
+        .share-links {
+            justify-content: center;
+        }
+    }
+}

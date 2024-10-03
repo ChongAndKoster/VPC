@@ -1,0 +1,61 @@
+.restore-your-vote {
+    padding: 50px 0;
+    background-image: 
+        url(./assets/img/pin-pattern.png),
+        linear-gradient(316deg, #d30045 0%, #6100FF 65%, #00A2FF 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center 100%, center center;
+    background-size: cover, cover;
+    
+    @include media-breakpoint-up(md) {
+        padding: 100px 0;
+    }
+    
+    &--gray-bkgd {
+        background: $gray-100;
+        
+        .restore-your-vote__headline {
+            color: $royal;
+        }
+    }
+    
+    &__headline {
+        margin: 0 0 40px 0;
+        color: #fff;
+        font-size: 2.25rem;
+        font-weight: bold;
+        line-height: 1.1;
+        text-align: center;
+        
+        @include media-breakpoint-up(md) {
+            font-size: 4rem;
+        }
+    }
+    
+    &__content {
+        max-width: 712px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: $border-radius;
+        
+        .content__form {
+            padding: 20px;
+            position: relative;
+            
+            #spinner {
+                position: absolute;
+                top: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            iframe {
+                height: 980px;
+            }
+            
+            @include media-breakpoint-up(md) {
+                padding: 50px;
+            }
+        }
+    }
+}

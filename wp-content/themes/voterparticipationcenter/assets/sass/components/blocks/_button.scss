@@ -1,0 +1,117 @@
+.blocks {
+    .wp-block-button {
+        @extend .container;
+        margin-bottom: 50px;
+
+        &--btn-main a {
+            @extend .btn;
+        }
+
+        // "Large"
+        &.is-style-large .wp-block-button__link,
+        &.is-style-large-blue-gradient .wp-block-button__link,
+        &.is-style-large-blue-green-gradient .wp-block-button__link {
+            @extend .btn-main, .btn-main--arrow;
+            box-shadow: 0 13px 24px 0 rgba(0,0,0,0.30);
+            transition: all .25s;
+
+            &.has-background:after {
+                background-image: $arrow-white;
+            }
+
+            &:hover {
+                color: #fff;
+                box-shadow: inset 0 0 0 3em $primary, 0 13px 24px 0 rgba(0,0,0,0.30);
+                
+                &:after {
+                    background-image: $arrow-white;
+                }
+            }
+        }
+
+        &.is-style-large-blue-gradient .wp-block-button__link {
+            color: #fff;
+            background-image: linear-gradient(135deg, #2F84FD 0%, #6100FF 100%);
+
+            &:after {
+                background-image: $arrow-white;
+            }
+        }
+
+        &.is-style-large-blue-green-gradient .wp-block-button__link {
+            color: #fff;
+            background-image: linear-gradient(135deg, #2F84FD 0%, #00E8BC 100%);
+
+            &:after {
+                background-image: $arrow-white;
+            }
+        }
+
+        // "Small"
+        &.is-style-small .wp-block-button__link {
+            font-size: 1rem;
+            font-weight: bold;
+            padding: $input-btn-padding-y $input-btn-padding-x;
+            border-radius: 20px;
+            line-height: $input-btn-line-height;
+        }
+    }
+}
+
+$button-colors: (
+    'dark-blue':   $dark-blue,
+    'dark-green':  $dark-green,
+    'gray-500':    $gray-500,
+    'purple':      $purple,
+    'razz':        $razz,
+    'royal':       $royal,
+    'darker-blue': $darker-blue,
+);
+
+@each $name, $color in $button-colors {
+    .has-#{$name}-color {
+        color: $color !important;
+    }
+
+    .has-#{$name}-background-color {
+        background-color: $color !important;
+    }
+}
+
+.wp-block-button__link {
+    border-radius: 0;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:not(.has-text-color) {
+        color: white;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &:not(.has-background) {
+        $default: nth( nth( $button-colors, 1 ), 2 ); // first color in $button-colors array
+        background-color: $default;
+
+        &:hover,
+        &:focus {
+            background-color: darken( $default, 20% );
+        }
+    }
+
+    @each $name, $color in $button-colors {
+        &.has-#{$name}-color:hover,
+        &.has-#{$name}-color:focus {
+            color: $color !important;
+        }
+
+        &.has-#{$name}-background-color:hover,
+        &.has-#{$name}-background-color:focus {
+            background-color: darken( $color, 20% ) !important;
+        }
+    }
+}

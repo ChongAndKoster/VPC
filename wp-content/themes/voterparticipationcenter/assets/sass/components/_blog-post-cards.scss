@@ -1,0 +1,115 @@
+.blog-post-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    
+    // When the posts fill 50% of screen width,
+    // show 4 posts.
+    .blog-post-card:nth-child(4) {
+        display: none;
+        
+        @include media-breakpoint-up(sm) {
+            display: flex;
+        }
+        
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+}
+
+.blog-post-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 25px;
+    text-align: left;
+
+    @include media-breakpoint-up(sm) {
+        width: calc(50% - 9px);
+    }
+
+    @include media-breakpoint-up(md) {
+        width: calc(33.33333% - 15px);
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: 220px;
+        border-radius: 4px 4px 0 0;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include media-breakpoint-up(sm) {
+            height: 180px;
+        }
+        
+        @include media-breakpoint-up(md) {
+            height: 180px;
+        }
+        
+        @include media-breakpoint-up(lg) {
+            height: 200px;
+        }
+        
+        @include media-breakpoint-up(lg) {
+            height: 220px;
+        }
+        
+        // img { 
+        //     width: 100% !important;
+        //     height: auto !important;
+        //     border-radius: 4px 4px 0 0;
+        // }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+        padding: 20px 20px 20px 26px;
+        background: #fff;
+        border-radius: 0 0 4px 4px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 25px 20px 25px 26px;
+        }
+    }
+
+    &__meta {
+        margin-bottom: 10px;
+        color: $light-purple;
+        font-size: .875rem;
+        text-transform: uppercase;
+
+        .blog-post-card__date {
+            font-weight: 300;
+        }
+
+        .blog-post-card__category {
+            font-weight: bold;
+        }
+    }
+
+    &__headline {
+        margin: 0 0 20px 0;
+        font-family: $font-family-serif;
+        -webkit-font-smoothing: auto;
+        font-size: 1.1rem;
+        line-height: 1.3;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .btn {
+        font-size: .75rem;
+        padding-left:  1.75rem;
+        padding-right: 1.75rem;
+    }
+}

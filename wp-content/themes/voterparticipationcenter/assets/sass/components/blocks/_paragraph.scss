@@ -1,0 +1,16 @@
+.blocks {
+    & > p, 
+    & > ul, 
+    & > ol {
+        @extend .container;
+    }
+    
+    & > ul, 
+    & > ol {
+        padding-left: 3.2em;
+    }
+
+    p + figure {
+        margin-top: 50px;
+    }
+}

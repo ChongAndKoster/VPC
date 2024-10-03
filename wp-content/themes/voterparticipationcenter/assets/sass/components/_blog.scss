@@ -1,0 +1,96 @@
+body.blog,
+body.archive {
+    
+    .app-main {
+        background: $gray-100;
+    }
+    
+    .loader {
+        display: flex;
+        align-items: center;
+        padding: 30px 0;
+        
+        div {
+            margin-right: 12px;
+        }
+    }
+    
+    .blog__header {
+        padding: 70px 0 246px;
+        background-image: linear-gradient(218deg, #1d74ff 0%, #6100FF 50%, #7400D4 100%);
+        text-align: center;
+        
+        @include media-breakpoint-up(lg) {
+            padding: 97px 0 246px;
+        }
+        
+        .header__headline {
+            margin: 0 0 50px 0;
+            color: #fff;
+            font-size: 2.75rem;
+            font-weight: bold;
+            line-height: 1;
+            
+            @include media-breakpoint-up(sm) {
+                margin: 0 0 70px 0;
+                font-size: 4rem;
+            }
+        }
+        
+        .header__categories {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+            li {
+                margin: 0 5px 10px 5px;
+                
+                a {
+                    display: block;
+                    padding: 6px 16px 8px 16px;
+                    background: rgba(218, 223, 234, .36);
+                    border-radius: 15px;
+                    color: #fff;
+                    font-size: .875rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    line-height: 1;
+                    
+                    &:hover {
+                        background: rgba(218, 223, 234, .5);
+                    }
+                    
+                    &.active {
+                        background: $razz;
+                    }
+                }
+            }
+        }
+    }
+    
+    .blog-posts {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: -220px;
+        
+        @include media-breakpoint-up(sm) {
+            margin-top: -180px;
+        }
+        
+        @include media-breakpoint-up(md) {
+            margin-top: -180px;
+        }
+        
+        @include media-breakpoint-up(lg) {
+            margin-top: -200px;
+        }
+        
+        @include media-breakpoint-up(lg) {
+            margin-top: -220px;
+        }
+    }
+}

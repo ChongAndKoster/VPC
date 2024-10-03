@@ -1,0 +1,189 @@
+.my-vote {
+    padding-top: 35px;
+    background-image: linear-gradient(1deg, #F0F2F5 0%, #FFFFFF 100%);
+    
+    .container {
+        max-width: 1420px;
+    }
+    
+    &__header {
+        text-align: center;
+        
+        .btn-wrap {
+            display: inline-block;
+            box-shadow: 0 13px 24px transparentize(#B2B2B2, .4);
+            margin-top: 15px;
+        }
+        
+        @include media-breakpoint-up(md) {
+            font-size: 1.25rem;
+        }
+    }
+    
+    &__headline {
+        margin: 0 0 12px 0;
+        font-size: 1.75rem;
+        font-weight: bold;
+        line-height: 1.1;
+        
+        @include media-breakpoint-up(md) {
+            font-size: 2.175rem;
+        }
+    }
+    
+    &__infographic {
+        img { max-width: 100%; }
+        
+        .infographic__captions {
+            height: 10px;
+            position: relative;
+            z-index: 1;
+            color: $gray-600;
+            
+            @include media-breakpoint-up(sm) {
+                height: 30px;
+            }
+            
+            @include media-breakpoint-up(md) {
+                height: 120px;
+            }
+            
+            @include media-breakpoint-up(xl) {
+                height: 300px;
+            }
+            
+            .caption {
+                position: absolute;
+                max-width: 110px;
+                text-align: center;
+                line-height: 1;
+                
+                &:nth-child(1) { left: 2%; top: 75px; }
+                &:nth-child(2) { display: none; /*left: 16%; top: 28px;*/ }
+                &:nth-child(3) { left: 38%; top: 38px; }
+                &:nth-child(4) { display: none; /*left: 55%; top: 28px;*/ }
+                &:nth-child(5) { left: 76%; top: 75px; }
+                
+                @include media-breakpoint-up(sm) {
+                    max-width: 130px;
+                    &:nth-child(1) { left: 7%; top: 50px; }
+                    // &:nth-child(2) { left: 22%; top: 20px; }
+                    &:nth-child(3) { left: 50%; top: 20px; }
+                    // &:nth-child(4) { left: 65%; top: 15px; }
+                    &:nth-child(5) { left: 79%; top: 50px; }
+                }
+                
+                @include media-breakpoint-up(md) {
+                    max-width: 150px;
+                    &:nth-child(1) { left: 5%; top: 115px; }
+                    &:nth-child(2) { display: block; left: 23%; top: 40px; }
+                    &:nth-child(3) { left: 52%; top: 60px; }
+                    &:nth-child(4) { display: block; left: 65%; top: 145px; }
+                    &:nth-child(5) { left: 84%; top: 100px; }
+                }
+                
+                @include media-breakpoint-up(lg) {
+                    &:nth-child(1) { left: 5%; top: 55px; }
+                    &:nth-child(2) { left: 22%; top: 20px; }
+                    &:nth-child(3) { left: 54%; top: 46px; }
+                    &:nth-child(4) { left: 67%; top: 116px; }
+                    &:nth-child(5) { left: 84%; top: 70px; }
+                }
+                
+                @include media-breakpoint-up(xl) {
+                    &:nth-child(1) { left: 12%; top: 100px; }
+                    &:nth-child(2) { left: 26%; top: 30px; }
+                    &:nth-child(3) { left: 56%; top: 48px; }
+                    &:nth-child(4) { left: 68%; top: 150px; }
+                    &:nth-child(5) { left: 85%; top: 80px; }
+                }
+                
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 2px;
+                    height: 50px;
+                    background: linear-gradient(to bottom, rgba(137,144,158,1) 0%,rgba(255,255,255,1) 100%);
+                    position: absolute;
+                    bottom: -5px;
+                    left: 50%;
+                    transform: translate(-50%, 100%);
+                    
+                    @include media-breakpoint-up(xl) {
+                        height: 90px;
+                    }
+                }
+                
+                .caption__icon {
+                    display: block;
+                    width: 90px;
+                    height: 52px;
+                    background: url(./assets/img/my-vote.svg) no-repeat;
+                    background-size: contain;
+                    margin: 0 auto;
+                    
+                    @include media-breakpoint-up(sm) {
+                        width: 110px;
+                        height: 63px;
+                    }
+                    
+                    @include media-breakpoint-up(xl) {
+                        width: 135px;
+                        height: 77px;
+                    }
+                }
+                
+                .caption__label { 
+                    display: block;
+                    font-size: .75rem;
+                    font-weight: bold;
+                    line-height: 1.1;
+                    
+                    @include media-breakpoint-up(xl) {
+                        font-size: .875rem;
+                    }
+                }
+            }
+        }
+        
+        .infographic__people {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            z-index: 2;
+            
+            .person {
+                position: absolute;
+                bottom: 0;
+                
+                &:nth-child(1) { left: 0;   max-width: 15vw; }
+                &:nth-child(2) { left: 12%; max-width: 22vw; }
+                &:nth-child(3) { left: 31%; max-width: 26vw; }
+                &:nth-child(4) { left: 56%; max-width: 16vw; }
+                &:nth-child(5) { left: 72%; max-width: 22vw; }
+                
+                &:nth-child(6) { 
+                    left: 90%; 
+                    bottom: 7%; 
+                    max-width: 10vw;
+
+                    @include media-breakpoint-up(md) {
+                        left: 86%; 
+                        bottom: 30%; 
+                        max-width: 8vw;
+                    }
+                    
+                    @include media-breakpoint-up(lg) {
+                        left: 88%; 
+                        bottom: 26%; 
+                        max-width: 9vw;
+                    }
+                    
+                    @include media-breakpoint-up(xl) {
+                        left: 91%; 
+                    }
+                }
+            }
+        }
+    }
+}

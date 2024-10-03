@@ -1,0 +1,9 @@
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+  
+    @include media-breakpoint-up(lg) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

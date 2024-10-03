@@ -1,0 +1,9 @@
+.blocks  {
+    h2, h3, h4, h5, h6 {
+        @extend .container;
+    }
+    
+    p + .is-style-alt {
+        margin-top: 40px;
+    }
+}

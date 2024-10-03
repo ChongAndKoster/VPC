@@ -1,0 +1,168 @@
+.voter-congress-stats {
+    padding-top: 60px;
+    
+    .container {
+        max-width: 1353px;
+    }
+    
+    &__header {
+        text-align: center;
+        
+        .btn-wrap {
+            display: inline-block;
+            box-shadow: 0 13px 24px transparentize(#B2B2B2, .4);
+            margin-top: 20px;
+        }
+        
+        @include media-breakpoint-up(md) {
+            font-size: 1.25rem;
+        }
+    }
+    
+    &__headline {
+        margin: 0 0 15px 0;
+        font-size: 1.75rem;
+        font-weight: bold;
+        line-height: 1.1;
+        
+        @include media-breakpoint-up(md) {
+            font-size: 2.175rem;
+        }
+    }
+    
+    &__stats {
+        margin-top: 50px;
+        img { max-width: 100%; }
+        
+        @include media-breakpoint-up(md) {
+            margin-top: 100px;
+        }
+        
+        .stats__numbers {
+            height: 70px;
+            position: relative;
+            z-index: 1;
+            color: $gray-300;
+            
+            @include media-breakpoint-up(sm) {
+                height: 130px;
+            }
+            
+            .number {
+                position: absolute;
+                max-width: 130px;
+                text-align: center;
+                line-height: 1;
+                
+                &:nth-child(1) { left: 0; top: 150px; }
+                &:nth-child(2) { left: 22%; top: 28px; }
+                &:nth-child(3) { left: 45%; top: 150px; }
+                &:nth-child(4) { left: 77%; top: 28px; }
+                
+                @include media-breakpoint-up(sm) {
+                    max-width: 175px;
+                    &:nth-child(1) { left: 0; top: 150px; }
+                    &:nth-child(2) { left: 22%; top: 28px; }
+                    &:nth-child(3) { left: 45%; top: 100px; }
+                    &:nth-child(4) { left: 77%; top: 28px; }
+                }
+                
+                @include media-breakpoint-up(md) {
+                    &:nth-child(1) { left: 0; top: 80px; }
+                    &:nth-child(2) { left: 22%; top: 28px; }
+                    &:nth-child(3) { left: 45%; top: 70px; }
+                    &:nth-child(4) { left: 77%; top: 28px; }
+                }
+                
+                @include media-breakpoint-up(lg) {
+                    &:nth-child(1) { left: 6%; top: 30px; }
+                    &:nth-child(2) { left: 26%; top: 0; }
+                    &:nth-child(3) { left: 48%; top: 10px; }
+                    &:nth-child(4) { left: 82%; top: 28px; }
+                }
+                
+                @include media-breakpoint-up(xl) {
+                    &:nth-child(1) { left: 20%; top: 40px; }
+                    &:nth-child(2) { left: 39%; top: 28px; }
+                    &:nth-child(3) { left: 71%; top: 0; }
+                    &:nth-child(4) { left: 86%; top: 28px; }
+                }
+                
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 2px;
+                    height: 90px;
+                    background: linear-gradient(to bottom, rgba(137,144,158,1) 0%,rgba(255,255,255,1) 100%);
+                    position: absolute;
+                    bottom: -5px;
+                    left: 50%;
+                    transform: translate(-50%, 100%);
+                }
+                
+                .number__value {
+                    display: block;
+                    font-size: 3rem;
+                    font-family: $font-family-serif;
+                    line-height: 1;
+                    
+                    @include media-breakpoint-up(sm) {
+                        font-size: 4.25rem;
+                    }
+                }
+                
+                .number__label { 
+                    display: block;
+                    font-size: .875rem;
+                    font-weight: bold;
+                    line-height: 1.1;
+                }
+                
+                &.number--sm {
+                    max-width: 132px;
+                    color: #DBDEE4;
+                    
+                    &:after {
+                        background: linear-gradient(to bottom, #DBDEE4 0%,rgba(255,255,255,1) 100%);
+                    }
+                    
+                    .number__value { font-size: 3.375rem; }
+                    .number__label { font-size: .6875rem; }
+                }
+                
+                &.number--lg {
+                    @include media-breakpoint-up(md) {
+                        max-width: 175px;
+                        
+                        .number__value { font-size: 5.3125rem; }
+                        .number__label { font-size: 1rem; }
+                    }
+                }
+            }
+        }
+        
+        .stats__people {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            z-index: 2;
+            
+            .person {
+                position: absolute;
+                bottom: 0;
+                
+                // Voters
+                &:nth-child(1) { left: 0;   max-width: 15vw; }
+                &:nth-child(2) { left: 25%; max-width: 18vw; }
+                &:nth-child(3) { left: 55%; max-width: 16vw; }
+                &:nth-child(4) { left: 75%; max-width: 15vw; }
+                
+                // Congress
+                &:nth-child(5) { left: 17%; max-width: 15vw; }
+                &:nth-child(6) { left: 39%; max-width: 20vw; }
+                &:nth-child(7) { left: 68%; max-width: 12vw; }
+                &:nth-child(8) { left: 85%; max-width: 14vw; }
+            }
+        }
+    }
+}

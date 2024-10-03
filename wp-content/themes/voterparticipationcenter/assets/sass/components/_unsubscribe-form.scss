@@ -1,0 +1,20 @@
+.unsubscribe-form {
+    padding: 50px 0;
+    background: $gray-100;
+    
+    .container {
+        padding: 0;
+    }
+    
+    iframe {
+        height: 1880px;
+        
+        @media (min-width: 360px) {
+            height: 1780px;
+        }
+        
+        @include media-breakpoint-up(md) {
+            height: 1530px;
+        }
+    }
+}

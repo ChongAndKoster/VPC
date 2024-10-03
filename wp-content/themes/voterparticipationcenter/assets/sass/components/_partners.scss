@@ -1,0 +1,61 @@
+.partners {
+    padding: 50px 0 40px 0;
+    background: $darker-blue;
+    text-align: center;
+    
+    @include media-breakpoint-up(md) {
+        padding: 60px 0 50px 0;
+    }
+    
+    &__headline {
+        color: #52A9FF;
+        font-size: 1.125rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    &__logos {
+        margin: 100px 0;
+        
+        .slick-list {
+            width: 100%;
+            
+            .slick-track {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+        
+        .slides {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            
+            .slide {
+                padding: 0 20px;
+                text-align: center;
+            }
+            
+            a {
+                display: inline-block;
+                &:focus { outline: none; }
+            }
+            
+            img {
+                max-width: 100%;
+            }
+        }
+        
+        @include media-breakpoint-up(md) {
+            margin: 165px 0;
+        }
+    }
+    
+    &__note {
+        font-size: 1rem;
+        color: $light-blue;
+    }
+}

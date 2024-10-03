@@ -1,0 +1,81 @@
+.voter-registration-blocks {
+    display: flex;
+    flex-direction: column;
+    
+    @include media-breakpoint-up(md) {
+        flex-direction: row;
+    }
+}
+
+.voter-registration-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 425px;
+    padding: 20px;
+    
+    @include media-breakpoint-up(md) {
+        width: 50%;
+        min-height: 500px;
+        padding: 30px;
+    }
+    
+    @include media-breakpoint-up(lg) {
+        min-height: 570px;
+    }
+    
+    img { max-width: 100%; }
+    
+    // Text
+    &--text {
+        min-height: 300px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        
+        .voter-registration-block__content {
+            max-width: 490px;
+        }
+    
+        .voter-registration-block__headline {
+            margin: 0 0 15px 0;
+            color: $razz;
+            font-size: 1.75rem;
+            font-weight: bold;
+            line-height: 1.1;
+        }
+        
+        @include media-breakpoint-up(lg) {
+            font-size: 1.15rem;
+            line-height: 1.4;
+            
+            .voter-registration-block__headline {
+                font-size: 2.25rem;
+            }
+        }
+        
+        a.btn {
+            margin-top: 20px;
+            
+            &:not(.link-out):after {
+                margin-left: 7px;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+    
+    // Image
+    &--image {
+        background: $bright-green;
+        background-position: center top;
+        background-size: cover;
+        
+        .voter-registration-block__content {
+            max-width: 380px;
+            
+            @include media-breakpoint-up(lg) {
+                max-width: 500px;
+            }
+        }
+    }
+}

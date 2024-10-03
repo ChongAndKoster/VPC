@@ -1,0 +1,155 @@
+.btn {
+    border-radius: 2em;
+    font-weight: 700;
+    text-decoration: none !important;
+    
+    &.btn--royal {
+        background: $royal;
+        color: #fff !important;
+        &:hover { background: darken($royal, 10%); }
+    }
+    
+    &.btn--razz {
+        background: $razz;
+        color: #fff !important;
+        &:hover { background: darken($razz, 10%); }
+    }
+    
+    &.btn--dark-blue {
+        background: $dark-blue;
+        color: #fff !important;
+        &:hover { background: darken($dark-blue, 10%); }
+    }
+    
+    &.btn--darker-blue {
+        background: $darker-blue;
+        color: #fff !important;
+        &:hover { background: darken($darker-blue, 10%); }
+    }
+    
+    // Outline
+    &.btn-outline-white {
+        color: #fff !important;
+        border-color: #fff;
+        
+        &:hover {
+            background: #fff;
+            color: $body-color;
+        }
+    }
+}
+
+$arrow-gray: url("data:image/svg+xml,%3Csvg width='11px' height='18px' viewBox='0 0 11 18' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' fill='none' fill-rule='evenodd'%3E%3Cpolygon fill='%237489B8' transform='translate(5.455000, 8.941522) rotate(-180.000000) translate(-5.455000, -8.941522) ' points='1 8.94142076 1.75133237 9.8144883 7.8465111 16.8830435 9.91 15.1369421 4.56622135 8.94152174 9.91 2.74610143 7.8465111 1 1.75133237 8.06855518'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E");
+$arrow-white: url("data:image/svg+xml,%3Csvg width='11px' height='18px' viewBox='0 0 11 18' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' fill='none' fill-rule='evenodd'%3E%3Cpolygon fill='%23FFFFFF' transform='translate(5.455000, 8.941522) rotate(-180.000000) translate(-5.455000, -8.941522) ' points='1 8.94142076 1.75133237 9.8144883 7.8465111 16.8830435 9.91 15.1369421 4.56622135 8.94152174 9.91 2.74610143 7.8465111 1 1.75133237 8.06855518'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E");
+
+.btn-main {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 2.5rem;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    color: $light-purple;
+    font-weight: bold;
+    white-space: nowrap;
+    
+    @include media-breakpoint-up(lg) {
+        display: inline-block;
+        padding: 1.75rem 2.5rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 1.125rem;
+    }
+    
+    &:hover {
+        color: #fff;
+        box-shadow: inset 0 0 0 3em $primary;
+        
+        &:after {
+            background-image: $arrow-white !important;
+        }
+    }
+    
+    .btn__icon {
+        display: inline-block;
+        width: 30px;
+        margin-left: -.5em;
+        text-align: left;
+    }
+    
+    // Dark Blue version
+    &--dark-blue {
+        color: #fff;
+        background: $dark-blue;
+        
+        &.btn-main--arrow:after {
+            background-image: $arrow-white !important;
+        }
+    }
+    
+    // Darker Blue version
+    &--darker-blue {
+        color: #fff;
+        background: $darker-blue;
+        
+        &.btn-main--arrow:after {
+            background-image: $arrow-white !important;
+        }
+    }
+    
+    // Dark Green version
+    &--dark-green {
+        color: #fff;
+        background: $dark-green;
+        
+        &.btn-main--arrow:after {
+            background-image: $arrow-white !important;
+        }
+    }
+    
+    // Gradient version
+    &--gradient {
+        color: #fff;
+        background: linear-gradient(135deg, #2F84FD 0%, #6100FF 100%);
+        
+        &.btn-main--arrow:after {
+            background-image: $arrow-white !important;
+        }
+    }
+    
+    // Blue/Green Gradient version
+    &--blue-green-gradient {
+        color: #fff;
+        background: linear-gradient(135deg, #2F84FD 0%, #00e8bc 100%);
+        
+        &.btn-main--arrow:after {
+            background-image: $arrow-white !important;
+        }
+    }
+}
+
+.btn-main.btn-main--arrow {
+    padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+    
+    @include media-breakpoint-up(lg) {
+        padding: 1.25rem 2.5rem;
+    }
+    
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 11px;
+        height: 18px;
+        margin-left: 5px;
+        vertical-align: -3px;
+        background-image: $arrow-gray;
+        position: absolute;
+        right: 20px;
+        
+        @include media-breakpoint-up(lg) {
+            position: static;
+        }
+    }
+}

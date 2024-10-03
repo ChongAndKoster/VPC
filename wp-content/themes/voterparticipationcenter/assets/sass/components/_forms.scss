@@ -1,0 +1,73 @@
+.form-vpc {
+    label span {
+        color: $primary;
+    }
+    
+    label:not(.custom-control-label):not(.custom-file-label):not(.form-check-label) {
+        display: block;
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    
+    label.custom-file-label {
+        padding-left: 15px;
+    }
+    
+    label.form-check-label {
+        font-size: .9rem;
+    }
+    
+    input, textarea, select {
+        width: 100%;
+        padding: .55rem 1em;
+        background: $gray-100;
+        border: none;
+        border-bottom: 2px solid $purple;
+        border-radius: 4px 4px 0 0;
+        margin-bottom: 25px;
+        
+        &::placeholder {
+            color: #89909E;
+            font-size: .875rem;
+            font-style: normal;
+            opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+            color: #89909E;
+            font-size: .875rem;
+            font-style: normal;
+        }
+
+        &::-ms-input-placeholder {
+            color: #89909E;
+            font-size: .875rem;
+            font-style: normal;
+        }
+    }
+    
+    textarea {
+        height: 170px;
+    }
+    
+    input[type="submit"] {
+        @extend .btn;
+        width: auto;
+        color: #fff;
+        background: $razz;
+        
+        &:hover {
+            color: #fff;
+            background: darken($razz, 10%);
+        }
+    }
+    
+    input + small,
+    select + small,
+    textarea + small {
+        line-height: 1.5;
+        display: block;
+        margin-top: 5px;
+    }
+}

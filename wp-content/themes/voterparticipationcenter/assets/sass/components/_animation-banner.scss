@@ -1,0 +1,33 @@
+.animation-banner {
+    padding: 45px 0 0 0;
+    text-align: center;
+    
+    .container {
+        max-width: 1350px;
+    }
+    
+    &__headline {
+        margin: 0;
+        font-size: 2.125rem;
+        font-weight: bold;
+        
+        @include media-breakpoint-up(lg) {
+            font-size: 2.375rem;
+        }
+    }
+    
+    &__subheadline {
+        margin: 15px 0 0 0;
+        font-size: 1.25rem;
+        font-weight: normal;
+        line-height: 1.475;
+        
+        @include media-breakpoint-up(lg) {
+            font-size: 1.375rem;
+        }
+    }
+    
+    lottie-player {
+        line-height: 0;
+    }
+}

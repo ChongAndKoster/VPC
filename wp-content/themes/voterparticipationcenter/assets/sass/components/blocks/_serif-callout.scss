@@ -1,0 +1,51 @@
+.blocks .block.block--serif-callout {
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    margin: 40px 0;
+    background: $gray-100;
+    font-size: 1.55rem;
+    font-family: $font-family-serif;
+    line-height: 1.4;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+    
+    @include media-breakpoint-up(md) {
+        font-size: 2.125rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin: 50px 0;
+        font-size: 2.75rem;
+        line-height: 1.2;
+    }
+    
+    &.serif-callout--xs {
+        font-size: 1.1rem;
+        @include media-breakpoint-up(lg) { font-size: 1.2rem; }
+    }
+    
+    &.serif-callout--sm {
+        font-size: 1.25rem;
+        @include media-breakpoint-up(md) { font-size: 1.5rem; }
+        @include media-breakpoint-up(lg) { font-size: 1.75rem; }
+    }
+    
+    &.serif-callout--md {
+        font-size: 1.3rem;
+        @include media-breakpoint-up(md) { font-size: 1.75rem; }
+        @include media-breakpoint-up(lg) { font-size: 2.15rem; }
+    }
+    
+    &.serif-callout--lg {
+        // Same as no modifier (the default)
+    }
+    
+    &.serif-callout--xl {
+        font-size: 1.85rem;
+        @include media-breakpoint-up(md) { font-size: 2.75rem; }
+        @include media-breakpoint-up(lg) { font-size: 3.75rem; }
+    }
+}

@@ -1,0 +1,128 @@
+.hero-banner {
+  padding-top: 50px;
+  padding-bottom: 62%;
+  background: $darker-blue;
+  position: relative;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: 1400px) {
+    padding-bottom: 56%;
+  }
+
+  @media (min-width: 1500px) {
+    padding-bottom: 54%;
+  }
+
+  @media (min-width: 1600px) {
+    padding-bottom: 52%;
+  }
+
+  @media (min-width: 1700px) {
+    padding-bottom: 50%;
+  }
+
+  .hero-banner__content {
+    position: relative;
+    z-index: 2;
+
+    @include media-breakpoint-up(md) {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-banner__headline {
+      margin: 0;
+      color: $white;
+      font-size: 2.125rem;
+      line-height: 1;
+
+      h1,
+      h2 {
+        margin: 0 0 5px 0;
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 1.1;
+      }
+
+      h2 {
+        color: $bright-green;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 2.53125rem;
+      }
+    }
+
+    .hero-banner__text {
+      margin-top: 20px;
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .hero-banner__buttons {
+      display: flex;
+      flex-direction: column;
+      max-width: 360px;
+      margin: 40px auto 0 auto;
+
+      @include media-breakpoint-up(lg) {
+        flex-direction: row;
+        max-width: 100%;
+        margin-top: 50px;
+
+        .btn {
+          width: 50%;
+          padding: 1.75rem 1rem;
+        }
+
+        .btn:last-child {
+          border-left: 2px solid gainsboro;
+        }
+      }
+    }
+  }
+
+  .banner__people {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    .person {
+      position: absolute;
+      bottom: 0;
+
+      img {
+        max-width: 100%;
+      }
+
+      &--older-lady {
+        left: 0;
+        width: 23%;
+      }
+      &--older-man {
+        left: 10%;
+        width: 38%;
+      }
+      &--young-woman {
+        left: 30%;
+        width: 46%;
+      }
+      &--student {
+        left: 60%;
+        width: 30%;
+      }
+      &--young-professional {
+        right: 0;
+        width: 25%;
+        text-align: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.app-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 70px;
+    min-height: calc(100vh - 487px);
+    
+    @include media-breakpoint-up(md) {
+        min-height: calc(100vh - 460px);
+    }
+    
+    @include media-breakpoint-up(lg) {
+        padding-top: 63px;
+        min-height: calc(100vh - 346px);
+    }
+    
+    @include media-breakpoint-up(xl) {
+        min-height: calc(100vh - 334px);
+    }
+    
+    .page-sources {
+        padding: 12px 0;
+        color: $light-purple;
+        font-size: .8125rem;
+    }
+}

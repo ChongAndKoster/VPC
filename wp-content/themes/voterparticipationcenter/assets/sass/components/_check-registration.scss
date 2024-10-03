@@ -1,0 +1,19 @@
+.check-registration-form {
+    padding: 0 0 100px 0;
+    background: $gray-100;
+    
+    .container {
+        max-width: 770px;
+        margin-top: -100px;
+    }
+    
+    .spinner {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    &__form {
+        // background: #fff;
+        // border-radius: 10px;
+    }
+}

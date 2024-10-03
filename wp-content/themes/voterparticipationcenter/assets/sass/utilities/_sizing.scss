@@ -1,0 +1,9 @@
+// Max-widths
+// Generates max pixel width classes. Example: .mw-960px
+$max-widths: 520 660 720 840 900 920 940 960 980 1000;
+
+@each $w in $max-widths {
+    .mw-#{$w}px {
+        max-width: #{$w}px !important;
+    }
+}

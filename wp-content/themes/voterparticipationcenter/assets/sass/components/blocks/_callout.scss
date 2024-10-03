@@ -1,0 +1,68 @@
+.blocks .block.block--callout {
+    margin-bottom: 20px;
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 32px;
+    }
+
+    .block__content {
+        max-width: ($post-max-width - 60px) !important;
+        padding: 30px;
+        background: #C7EFFF;
+        color: $royal;
+        font-size: 1.1rem;
+        font-weight: bold;
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 60px;
+            font-size: 1.25rem;
+        }
+    }
+
+    &.callout--pink {
+        .block__content {
+            background: $light-pink;
+            color: $razz;
+        }
+    }
+
+    &.callout--purple {
+        .block__content {
+            background: #D5D1FF;
+            color: $purple;
+        }
+    }
+
+    &.callout--green {
+        .block__content {
+            background: #C1FFE7;
+            color: $darker-green;
+        }
+    }
+
+    &.callout--left,
+    &.callout--right {
+        @include media-breakpoint-up(md) {
+            max-width: map-get($container-max-widths, 'md') !important;
+        }
+        @include media-breakpoint-up(lg) {
+            max-width: map-get($container-max-widths, 'lg') !important;
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: map-get($container-max-widths, 'xl') !important;
+        }
+        
+        .block__content {
+            max-width: $post-max-width;
+        }
+    }
+
+    &.callout--right {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

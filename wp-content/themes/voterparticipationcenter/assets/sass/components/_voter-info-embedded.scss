@@ -1,0 +1,40 @@
+.page-template-embedded-voter-info {
+    
+
+    .voter-info-banner {
+        padding: 0px;
+    }
+
+    iframe {
+        border-style: none;
+        width: 100vw;
+        height: 100vh;
+        visibility: hidden;
+    }
+
+    // Hide Vue until loaded
+    [v-cloak] { display: none }
+    
+    // Animations
+    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+    
+    // Vue transitions
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s;
+    }
+    .fade-enter, .fade-leave-to {
+        opacity: 0;
+    }
+
+    // Hide nav bar and footer
+    .app-header, .app-footer {
+        display: none;
+    }
+
+    // remove top padding from main
+    .app-main {
+        padding-top: 0px;
+    }
+    
+    
+}

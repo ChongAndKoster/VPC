@@ -1,0 +1,369 @@
+body.page-template-research {
+
+    .research-banner {
+        padding: 80px 0;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        
+        @include media-breakpoint-up(md) {
+            min-height: calc(100vh - 150px);
+            padding: 115px 0;
+        }
+        
+        .container {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .research-banner__bkgd {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            display: none;
+            
+            &.research-banner__bkgd--mobile {
+                display: block;
+            }
+            
+            @include media-breakpoint-up(md) {
+                display: block;
+                
+                &.research-banner__bkgd--mobile {
+                    display: none;
+                }
+            }
+        }
+
+        .research-banner__kicker {
+            display: block;
+            margin-bottom: 15px;
+            line-height: 1.3;
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.125rem;
+            }
+        }
+        
+        .research-banner__headline {
+            color: $light-blue;
+            font-size: 2.125rem;
+            font-weight: bold;
+            line-height: 1.1;
+            
+            @include media-breakpoint-up(md) {
+                font-size: 2.75rem;
+            }
+        }
+        
+        .research-banner__content {
+            max-width: 560px;
+            margin: 0 auto;
+        }
+    }
+
+    .research-charts {
+        padding-bottom: 30px;
+        background: $darker-blue;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+
+        .container--tabs {
+            max-width: 865px;
+        }
+
+        ul.nav-tabs {
+            z-index: 20;
+            
+            li {
+                @include media-breakpoint-up(md) {
+                    width: calc(25% - 10px);
+                    margin-bottom: 0;
+                }
+
+                a.tab--people-of-color.active {
+                    border-top-color: $yellow;
+                }
+
+                a.tab--unmarried-women.active {
+                    border-top-color: $razz;
+                }
+
+                a.tab--young-people.active {
+                    border-top-color: $dark-green;
+                }
+            }
+        }
+        
+        .tabs__content {
+            padding: 10px 0 40px 0;
+            margin: 0 auto;
+            
+            .tabs__headline {
+                margin: 0 0 10px 0;
+                font-size: 2.125rem;
+                font-weight: bold;
+                line-height: 1.1;
+            }
+            
+            @include media-breakpoint-up(md) {
+                padding: 30px 0 140px 0;
+            }
+        }
+    }
+
+    .research-chart-wrap {
+        position: relative;
+
+        .research-chart {
+            max-width: 818px;
+            margin: 40px auto 0 auto;
+
+            &__chart {
+                margin: 0 auto 30px auto;
+                img { max-width: 100%; }
+            }
+
+            &__legend {
+                display: flex;
+                flex-direction: column;
+                padding: 20px 0;
+                font-weight: normal;
+
+                @include media-breakpoint-up(md) {
+                    flex-direction: row;
+                    justify-content: center;
+                    font-size: 1.0625rem;
+                }
+
+                .legend__item {
+                    display: flex;
+                    align-items: center;
+                    padding: 0 15px;
+
+                    &:before {
+                        content: "";
+                        display: inline-block;
+                        width: 15px;
+                        height: 15px;
+                        margin-right: 1em;
+                        border-radius: 8px;
+                        background: $primary;
+                    }
+
+                    &--people-of-color:before {
+                        background-color: $yellow;
+                    }
+
+                    &--unmarried-women:before {
+                        background-color: $razz;
+                    }
+
+                    &--young-people:before {
+                        background-color: $dark-green;
+                    }
+                }
+            }
+
+            .btn-modal {
+                margin-top: 30px;
+            }
+        }
+
+        .research-modal {
+            width: 100%;
+            max-width: 1176px;
+            &:focus { outline: none; }
+
+            .modal__dialog {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                padding: 20px;
+                background: #fff;
+                border-radius: $border-radius;
+                box-shadow: 0 13px 24px 0 $darkest-blue;
+                color: $darker-blue;
+                font-size: 1.1rem;
+                line-height: 1.3;
+
+                @include media-breakpoint-up(lg) {
+                    padding: 40px 75px;
+                    font-size: 1.25rem;
+                }
+
+                img { max-width: 100%; }
+            }
+
+            .modal__close {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                padding: 0;
+                font-size: 1.5rem;
+                color: $darker-blue;
+                line-height: 1;
+
+                &:hover { color: $primary; }
+
+                @include media-breakpoint-up(md) {
+                    top: 15px;
+                    right: 15px;
+                    font-size: 2.25rem;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    top: 25px;
+                    right: 25px;
+                    font-size: 2.6rem;
+                }
+            }
+
+            .modal__headline {
+                margin-bottom: 10px;
+                font-size: 1.75rem;
+                font-weight: bold;
+
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 20px;
+                    font-size: 2.125rem;
+                }
+            }
+        }
+    }
+
+    .research-line-graph {
+        padding: 20px;
+        background: transparentize($darkest-blue, .6);
+        color: #fff;
+        text-align: center;
+
+        &__content {
+            max-width: 580px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        &__headline {
+            font-size: 1.75rem;
+            font-weight: bold;
+            line-height: 1.1;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 2.125rem;
+            }
+        }
+
+        &__switch {
+            display: flex;
+            justify-content: space-between;
+            max-width: 289px;
+            margin: 35px auto 20px auto;
+            background: #20417F;
+            border-radius: 15px;
+            position: relative;
+            z-index: 1;
+
+            button {
+                color: #fff;
+                font-weight: bold;
+                padding: 3px 30px;
+                background: none;
+                border: none;
+                border-radius: 15px;
+
+                &:focus { outline: none; }
+
+                &.active {
+                    background: $royal;
+                }
+            }
+        }
+
+        &__chart {
+            img, svg {
+                max-width: 100%;
+            }
+
+            @include media-breakpoint-up(md) {
+                margin-top: -31px;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 40px 54px 54px 54px;
+        }
+    }
+
+    .research-map {
+        padding: 60px 0 0 0;
+        color: $dark-blue;
+        text-align: center;
+
+        &__headline {
+            margin: 0 0 15px 0;
+            font-size: 1.75rem;
+            font-weight: bold;
+            line-height: 1.1;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 2.125rem;
+            }
+        }
+
+        &__map {
+            margin-top: 30px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .research-blog {
+        background: $gray-100;
+        padding: 60px 0 40px 0;
+        color: $dark-blue;
+        text-align: center;
+        
+        @include media-breakpoint-up(lg) {
+            padding: 120px 0 40px 0;
+        }
+
+        &__header {
+            max-width: 720px;
+            margin: 0 auto 60px auto;
+        }
+
+        &__headline {
+            margin: 0 0 15px 0;
+            color: $razz;
+            font-size: 1.75rem;
+            font-weight: bold;
+            line-height: 1.1;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 2.125rem;
+            }
+        }
+
+        &__footer {
+            margin-top: 20px;
+            font-size: 1.125rem;
+            font-weight: bold;
+
+            a {
+                color: $royal;
+                &:hover { color: darken($royal, 20%); }
+            }
+        }
+    }
+}

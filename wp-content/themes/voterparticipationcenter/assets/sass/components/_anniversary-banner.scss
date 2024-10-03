@@ -1,0 +1,65 @@
+.anniversary-banner {
+    padding: 2.25rem 0;
+
+    @media (min-width: 768px) {
+        padding: 2.85rem 0;
+        background-image: url(assets/img/20-years-mark.png);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: auto 100%;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__logo {
+        width: 160px;
+
+        @media (min-width: 768px) {
+            width: 132px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        &--mobile {
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+
+        &--desktop {
+            display: none;
+
+            @media (min-width: 768px) {
+                display: block;
+            }
+        }
+    }
+
+    &__headline {
+        display: none;
+        margin: 0 0 0 2.25rem;
+        color: #00c0a3;
+        font-size: 1.875rem;
+        font-weight: 700;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+
+        @media (min-width: 1060px) {
+            br { display: none; }
+        }
+
+        strong {
+            color: #001969;
+        }
+    }
+}

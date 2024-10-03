@@ -1,0 +1,25 @@
+.color-banner {
+    padding: 100px 0 165px 0;
+    background: $bright-green;
+    color: $dark-blue;
+    text-align: center;
+    
+    @include media-breakpoint-up(lg) {
+        padding: 140px 0 165px 0;
+    }
+    
+    &__headline {
+        margin: 0 0 15px 0;
+        font-size: 2.125rem;
+        font-weight: bold;
+        line-height: 1.1;
+        
+        @include media-breakpoint-up(lg) {
+            font-size: 2.75rem;
+        }
+    }
+    
+    &__content {
+        font-weight: bold;
+    }
+}

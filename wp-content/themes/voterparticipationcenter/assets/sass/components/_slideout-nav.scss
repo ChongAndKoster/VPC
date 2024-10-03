@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Slideout Nav Styles
+   ========================================================================== */
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.slideout-panel {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, .2);
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+    overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+    display: block !important;
+}
+
+.slideout-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 320px;
+    padding: 40px 0 30px 0;
+    background: #fff;
+    color: $gray-500;
+
+    .close-icon {
+        position: absolute;
+        right: 15px;
+        top: 0;
+        padding: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: $gray-500;
+        font-size: 2.5rem;
+        line-height: 1;
+        
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            color: $purple;
+        }
+    }
+
+    .logo {
+        display: block;
+        width: 240px;
+        height: 27px;
+        margin: 0 0 30px 20px;
+        background: url(./assets/img/logo-vpc.png) no-repeat;
+        background-size: contain;
+    }
+    
+    // Nav
+    .nav,
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-title,
+    .nav-link {
+        display: block;
+        width: 100%;
+        padding: 10px 5px 10px 20px;
+        position: relative;
+        color: $darker-blue;
+    }
+    
+    a.nav-link:hover {
+        background: #eee;
+    }
+    
+    // Top-level nav
+    nav > .nav > .nav-item {
+        position: relative;
+        
+        & > .nav-link {
+            font-weight: bold;
+        }
+        
+        &.nav-item__register {
+            padding: 0 20px;
+            margin-bottom: 5px;
+            
+            a.nav-link {
+                padding: .01rem .75rem .1rem .75rem;
+                border: 2px solid $purple;
+                border-radius: 18.5px;
+                color: $dark-blue;
+                text-align: center;
+                
+                &:hover {
+                    background: $purple;
+                    color: #fff;
+                }
+            }
+        }
+        
+        button {
+            width: 30px;
+            height: 30px;
+            padding: 0;
+            border: none;
+            background: none;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            font-size: 1.1rem;
+            
+            &:hover { color: $primary; background: $gray-100; }
+            &:focus { outline: none; }
+            
+            i {
+                display: inline-block;
+                font-size: .05rem;
+                transition: transform .2s;
+            }
+            
+            &[aria-expanded="true"] {
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    
+    // Sub-level nav
+    .sub-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        .nav-link {
+            padding-left: 3rem;
+        }
+    }
+}

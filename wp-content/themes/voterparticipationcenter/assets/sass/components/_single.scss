@@ -1,0 +1,69 @@
+body.single-post .app-main {
+    display: flex;
+    flex-direction: column;
+    
+    // Default container max-width
+    .container {
+        max-width: $post-max-width;
+    }
+
+    .single__header {
+        padding-top: 40px;
+        margin-bottom: 20px;
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 80px;
+            margin-bottom: 40px;
+        }
+
+        .single__date {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: .875rem;
+            font-weight: bold;
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 42px;
+                height: 42px;
+                color: #fff;
+                background: $dark-green;
+                border-radius: 26px;
+                margin: 0 8px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 50px;
+
+                span {
+                    width: 52px;
+                    height: 52px;
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .single__headline {
+            max-width: 620px;
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+            font-weight: normal;
+            font-family: $font-family-serif;
+            color: $dark-blue;
+            line-height: 1.1;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 2.5rem;
+            }
+        }
+
+        .single__sharing {
+            
+        }
+    }
+}

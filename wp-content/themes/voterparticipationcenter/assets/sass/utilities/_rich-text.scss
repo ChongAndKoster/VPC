@@ -1,0 +1,104 @@
+.rich-text {
+  line-height: initial;
+
+  h1 {
+    @extend .h1;
+  }
+
+  h2 {
+    @extend .h2;
+  }
+
+  h3 {
+    @extend .h3;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  hr {
+    clear: both;
+    width: 100%;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.5em;
+    margin-bottom: 2rem;
+  }
+
+  p + ul,
+  p + ol {
+    margin-top: -15px;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .alignleft,
+  img[align="left"],
+  img[style*="float: left"],
+  img[style*="float:left"] {
+    float: left;
+    margin: 0 1.25em 0.5em 0;
+  }
+
+  .alignright,
+  img[align="right"],
+  img[style*="float: right"],
+  img[style*="float:right"] {
+    float: right;
+    margin: 0 0 0.5em 1.25em;
+  }
+
+  .aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .alignleft,
+    img[align="left"],
+    img[style*="float: left"],
+    img[style*="float:left"],
+    .alignright,
+    img[align="right"],
+    img[style*="float: right"],
+    img[style*="float:right"] {
+      display: block;
+      float: none !important;
+      margin: 0 0 0.75rem 0;
+    }
+  }
+
+  video,
+  iframe {
+    max-width: 100%;
+  }
+
+  blockquote {
+    padding: 0;
+    margin: 0 0 5px 0;
+    font-style: italic;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 0 20px 20px 0;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &.formatted,
+    &.lined {
+      width: 100% !important;
+    }
+  }
+}

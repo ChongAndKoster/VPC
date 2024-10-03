@@ -1,0 +1,8 @@
+.blocks .wp-block-embed-vimeo {
+    @extend .container;
+    margin-bottom: 50px;
+
+    .wp-block-embed__wrapper {
+        @extend .video-wrap;
+    }
+}
