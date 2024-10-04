@@ -2,6 +2,7 @@
 /*
  * Template Name: Custom Tool - Election Day Lookup (2024)
  */
+// Election Day Voting
 ?>
 <?php 
     get_header();
@@ -9,6 +10,7 @@
     $page_background_color = get_field('page_background_color');
     $google_api_key        = 'AIzaSyDnk517m-q27EbCoG01RukXKq8RDA_a5mM';
     $ballotpedia_api_key   = 'p91FW0J23Y44lQwxfwnuFT50geO1hdZ7bBtZlx16';
+    $election_id           = 9000; // https://www.votinginfoproject.org/election-coverage
     
     if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -139,7 +141,6 @@
         </style>
 
         <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=<?php echo $google_api_key; ?>"></script>
-        <!--<script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>-->
         <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
         
         <script>
@@ -224,49 +225,57 @@
 
             // Ballot Tracking URLS
             var ballotTrack = [];
-            ballotTrack['AK'] = 'This tool does not have voting data for Alaska, <a target="_blank" href="https://myvoterinformation.alaska.gov/">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['AZ'] = 'We do not have any information for this location at this time. Please try again later or <a target="_blank" href="https://azsos.gov/elections">visit your Secretary of State website</a> for more information.';
-            ballotTrack['AR'] = 'This tool does not have voting data for Arkansas, <a target="_blank" href="https://www.sos.arkansas.gov/elections">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['CA'] = 'California only offers early voting in select counties. <a target="_blank" href="https://www.sos.ca.gov/elections/voting-info/ways-vote">please visit the Secretary of State website</a> to find information on how to vote.';
-            ballotTrack['DE'] = 'This tool does not have voting data for Delaware, <a target="_blank" href="https://elections.delaware.gov/">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['DC'] = '';
-            ballotTrack['FL'] = '';
-            ballotTrack['GA'] = 'We do not have any information for this location at this time. Please try again later or <a target="_blank" href="https://sos.ga.gov/">visit your Secretary of State website</a> for more information.';
-            ballotTrack['HI'] = '';
-            ballotTrack['ID'] = '';
-            ballotTrack['IL'] = '';
-            ballotTrack['IN'] = 'This tool does not have voting data for Indiana, <a target="_blank" href="https://www.in.gov/sos/elections/">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['IA'] = 'This tool does not have voting data for Iowa, <a target="_blank" href="https://sos.iowa.gov/elections/voterinformation/index.html">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['KS'] = 'We do not have any information for this location at this time. Please try again later or <a target="_blank" href="https://sos.ks.gov/elections/elections.html">visit your Secretary of State website</a> for more information.';
-            ballotTrack['KY'] = 'This tool does not have voting data for Kentucky, <a target="_blank" href="https://elect.ky.gov/Pages/default.aspx">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['LA'] = 'This tool does not have voting data for Louisiana, <a target="_blank" href="https://www.sos.la.gov/ElectionsAndVoting/Pages/default.aspx">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['ME'] = 'We do not have any information for this location at this time. Please try again later or <a target="_blank" href="https://www.maine.gov/sos/">visit your Secretary of State website</a> for more information.';
-            ballotTrack['MD'] = '';
-            ballotTrack['MA'] = 'This tool does not have voting data for Massachusetts, <a target="_blank" href="https://www.sec.state.ma.us/ele/">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['MI'] = 'We do not have any information for this location at this time. Please try again later or <a target="_blank" href="https://www.michigan.gov/sos">visit your Secretary of State website</a> for more information.';
-            ballotTrack['MN'] = 'We do not have any information for this location at this time. Please try again later or <a target="_blank" href="https://pollfinder.sos.state.mn.us/">visit your Secretary of State website</a> for more information.';
-            ballotTrack['MO'] = 'This tool does not have voting data for Missouri, <a target="_blank" href="https://www.sos.mo.gov/elections">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['MT'] = 'This tool does not have voting data for Montana, <a target="_blank" href="https://sosmt.gov/elections/">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['NE'] = '';
-            ballotTrack['NV'] = 'We do not have any information for this location at this time. Please try again later or <a target="_blank" href="https://www.nvsos.gov/sos">visit your Secretary of State website</a> for more information.';
-            ballotTrack['NJ'] = 'This tool does not have voting data for New Jersey, <a target="_blank" href="https://www.state.nj.us/state/elections/vote.shtml">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['NM'] = '';
-            ballotTrack['NY'] = 'This tool does not have voting data for New York, <a target="_blank" href="https://www.elections.ny.gov/">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['NC'] = '';
-            ballotTrack['ND'] = '';
-            ballotTrack['OH'] = 'We do not have any information for this location at this time. Please try again later or <a target="_blank" href="https://www.ohiosos.gov/elections/voters/toolkit/polling-location/">visit your Secretary of State website</a> for more information.';
-            ballotTrack['OK'] = '';
-            ballotTrack['PA'] = 'We do not have any information for this location at this time. Please try again later or <a target="_blank" href="https://www.dos.pa.gov/Pages/default.aspx">visit your Secretary of State website</a> for more information.';
-            ballotTrack['RI'] = '';
-            ballotTrack['SC'] = 'This tool does not have voting data for South Carolina, <a target="_blank" href="https://scvotes.gov/">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['SD'] = '';
-            ballotTrack['TN'] = 'This tool does not have voting data for Tennessee, <a target="_blank" href="https://sos.tn.gov/elections">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['TX'] = 'This tool does not have voting data for Texas, <a target="_blank" href="https://www.sos.state.tx.us/elections/">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['VT'] = '';
-            ballotTrack['VA'] = '';
-            ballotTrack['WV'] = 'This tool does not have voting data for West Virginia, <a target="_blank" href="https://sos.wv.gov/elections/Pages/default.aspx">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['WI'] = '';
-            ballotTrack['WY'] = '';
+            ballotTrack['AL'] = 'Alabama does not have ballot dropoff locations. Please visit the <a href="https://www.sos.alabama.gov/alabama-votes" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['AK'] = 'We do not have any information for this location at this time. Please visit the <a href="https://myvoterinformation.alaska.gov/" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['AZ'] = 'We do not have any information for this location at this time. Please try again later, or check <a href="https://azsos.gov/elections/about-elections/elections-procedures/early-voting-procedures" target="_blank">your county</a> website for information on how to vote.';
+            ballotTrack['AR'] = 'We do not have any information for this location at this time. Please visit the <a href="https://www.voterview.ar-nova.org/voterview" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['CA'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://caearlyvoting.sos.ca.gov/" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['CO'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.coloradosos.gov/voter/pages/pub/home.xhtml" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['CT'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://portal.ct.gov/SOTS/Common-Elements/V5-Template---Redesign/Elections--Voting--Home-Page" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['DE'] = 'We do not have any information for this location at this time. Please visit the <a href="https://elections.delaware.gov/" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['DC'] = 'We do not have any information for this location at this time. Please visit the <a href="https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool" target="_blank">Board of Elections website</a> for information on where and how to vote.';
+            ballotTrack['FL'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://dos.fl.gov/elections/for-voters/voting/early-voting-and-secure-ballot-intake-stations/" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['GA'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://mvp.sos.ga.gov/s/" target="_blank">Georgia My Voter Page</a> for information on how to vote.';
+            ballotTrack['HI'] = 'We do not have any information for this location at this time. Please visit the <a href="https://elections.hawaii.gov/voter-service-centers-and-places-of-deposit/" target="_blank">Office of Elections website</a> for information on where and how to vote.';
+            ballotTrack['ID'] = 'We do not have any information for this location at this time. Please visit the <a href="https://voteidaho.gov/casting-your-ballot/" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['IL'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.elections.il.gov/VotingAndRegistrationSystems/VoteByMailBallotDropBoxLocations.aspx" target="_blank">Board of Elections website</a> for information on where and how to vote.';
+            ballotTrack['IN'] = 'Indiana does not have ballot dropoff locations. Please visit the <a href="https://www.in.gov/sos/elections/" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['IA'] = 'We do not have any information for this location at this time. Please visit the <a href="https://sos.iowa.gov/elections/voterinformation/index.html" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['KS'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://sos.ks.gov/elections/important-election-information.html" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['KY'] = 'Kentucky does not have ballot dropoff locations. Please visit the <a href="https://elect.ky.gov/Pages/default.aspx" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['LA'] = 'Louisiana does not have ballot dropoff locations. Please visit the <a href="https://voterportal.sos.la.gov/Home/VoterLogin" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['ME'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.maine.gov/portal/government/edemocracy/voter_lookup.php" target="_blank">Secretary of State website</a> for information on where and how to vote.';
+            ballotTrack['MD'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://elections.maryland.gov/elections/2024/2024%20General%20drop%20box%20Locations%20English.pdf" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['MA'] = 'We do not have any information for this location at this time. Please visit the <a href="https://www.sec.state.ma.us/divisions/elections/voter-resources/find-my-local-election-office.htm" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['MI'] = 'We do not have any information for this location at this time. Please visit the <a href="https://mvic.sos.state.mi.us/Voter/Index" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['MN'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.sos.state.mn.us/elections-voting/other-ways-to-vote/ballot-drop-box-locations/" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['MS'] = 'Mississippi does not have ballot dropoff locations. Please visit the <a href="https://www.sos.ms.gov/elections-voting" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['MO'] = 'Missouri does not have ballot dropoff locations. Please visit the <a href="https://www.sos.mo.gov/elections" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['MT'] = 'We do not have any information for this location at this time. Please visit the <a href="https://prodvoterportal.mt.gov/WhereToVote.aspx" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['NE'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://sos.nebraska.gov/elections/nebraska-drop-box-locator" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['NV'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.nvsos.gov/sos/elections/election-information/2024-election-information/2024-voting-locations" target="_blank">Secretary of State website</a> for information on where and how to vote.';
+            ballotTrack['NH'] = 'New Hampshire does not have ballot dropoff locations. Please visit the <a href="https://app.sos.nh.gov/viphome" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['NJ'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://nj.gov/state/elections/vote-secure-drop-boxes.shtml" target="_blank">Secretary of State website</a> to find information on where and how to vote.';
+            ballotTrack['NM'] = 'We do not have any information for this location at this time. Please try again later or visit the <a href="https://www.sos.nm.gov/voting-and-elections/voter-information-portal-nmvote-org/" target="_blank">Secretary of State website</a> to find information on where and how to vote.';
+            ballotTrack['NY'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.elections.ny.gov/" target="_blank">Board of Elections website</a> to find information on how to vote.';
+            ballotTrack['NC'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.ncsbe.gov/voting/vote-mail/detailed-instructions-vote-mail#Tab-3ReturnaBallot-686" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['ND'] = 'We do not have any information for this location at this time. Please visit the <a href="https://www.sos.nd.gov/elections/voter/voting-north-dakota/how-do-i-vote/absentee-voting" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['OH'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.ohiosos.gov/elections/voters/absentee-voting/" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['OK'] = 'We do not have any information for this location at this time. Please visit the <a href="https://oklahoma.gov/elections/voters/how-to-vote.html" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['OR'] = 'We do not have information for this location at this time. Please try again later, or visit the <a href="https://sos.oregon.gov/voting/Pages/drop-box-locator.aspx" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['PA'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.pa.gov/en/agencies/vote/voter-support/mail-in-and-absentee-ballot/return-ballot.html" target="_blank">Secretary of State website</a> for information on where and how to vote.';
+            ballotTrack['RI'] = 'We do not have any information for this location at this time. Please visit the <a href="https://ridos.maps.arcgis.com/apps/instant/nearby/index.html?appid=ae2212ec857945e5990e2d0f5ce8b5ae" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['SC'] = 'We do not have any information for this location at this time. Please visit the <a href="https://scvotes.gov/voters/absentee-voting/" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['SD'] = 'We do not have any information for this location at this time. Please visit the <a href="https://vip.sdsos.gov/viplogin.aspx" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['TN'] = 'Tennessee does not have ballot dropoff locations. Please visit the <a href="https://sos.tn.gov/elections/guides/guide-to-absentee-voting" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['TX'] = 'Texas does not have ballot dropoff locations. Please visit the <a href="https://www.votetexas.gov/" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['UT'] = 'We do not have any information for this location at this time. Please visit the <a href="https://vote.utah.gov/securing-your-mail-ballot/" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['VT'] = 'We do not have any information for this location at this time. Please visit the <a href="https://mvp.vermont.gov/" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['VA'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.elections.virginia.gov/casting-a-ballot/absentee-voting/" target="_blank">Secretary of State website</a> for information on where and how to vote.';
+            ballotTrack['WA'] = 'This tool does not have voting data for Washington. Please visit the <a href="https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['WV'] = 'West Virginia does not have ballot dropoff locations. Please visit the <a href="https://sos.wv.gov/elections/Pages/GoVoteWV.aspx" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['WI'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://myvote.wi.gov/en-us/" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['WY'] = 'Wyoming does not have ballot dropoff locations. Please visit the <a href="https://sos.wyo.gov/elections/" target="_blank">Secretary of State website</a> to find information on how to vote.';
 
             // No early voting
             var noEarlyVoting = [];
@@ -669,11 +678,10 @@
                                 if( state_abbrev && lat && lng ){
 
                                     //if( state_abbrev == 'MI'){
-
                                         $.ajax({
                                             type: "POST",
                                             dataType: "jsonp",
-                                            url: "https://www.googleapis.com/civicinfo/v2/voterinfo?key=<?php echo $google_api_key; ?>&electionId="+state_election_ids[state_abbrev],
+                                            url: "https://www.googleapis.com/civicinfo/v2/voterinfo?key=<?php echo $google_api_key; ?>&electionId=<?php echo $election_id; ?>",
                                             data: formData,
                                             success: function(data) {
                                                 console.log(data);
@@ -711,7 +719,7 @@
                                                             if(ballotTrack[data.normalizedInput.state]){
                                                                 stateHtml += ballotTrackCheck;
                                                             } else {
-                                                                stateHtml += '<p>No locations came up in our search; please check your state\'s election site for more information.</p>';
+                                                                //stateHtml += '<p>No locations came up in our search; please check your state\'s election site for more information.</p>';
                                                             }
                                                         }
                                                         stateHtml += electionAdmins.map(electionAdminsTable).join('');
@@ -770,10 +778,9 @@
                                             }
 
                                         });
-                                    
-                                        /*
-                                    } else {
+                                    //} else {
                                         // Every other state
+                                        /*
                                         $.ajax({
                                             url: "https://api.civicengine.com/polling_places",
                                             data: { 

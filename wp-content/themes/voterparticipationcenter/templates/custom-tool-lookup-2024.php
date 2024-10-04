@@ -211,62 +211,62 @@
             var markerCluster = [];            
 
             // Ballot Tracking URLS
-            var ballotTrack = [];
-            ballotTrack['AK'] = 'This tool does not have voting data for Alaska, <a target="_blank" href="https://myvoterinformation.alaska.gov/">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['AZ'] = 'We do not have any information for this location at this time. Please try again later or <a target="_blank" href="https://azsos.gov/elections">visit your Secretary of State website</a> for more information.';
-            ballotTrack['AR'] = 'This tool does not have voting data for Arkansas, <a target="_blank" href="https://www.sos.arkansas.gov/elections">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['CA'] = 'California only offers early voting in select counties. <a target="_blank" href="https://www.sos.ca.gov/elections/voting-info/ways-vote">please visit the Secretary of State website</a> to find information on how to vote.';
-            ballotTrack['DE'] = 'This tool does not have voting data for Delaware, <a target="_blank" href="https://elections.delaware.gov/">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['DC'] = '';
-            ballotTrack['FL'] = '';
-            ballotTrack['GA'] = 'We do not have any information for this location at this time. Please try again later or <a target="_blank" href="https://sos.ga.gov/">visit your Secretary of State website</a> for more information.';
-            ballotTrack['HI'] = '';
-            ballotTrack['ID'] = '';
-            ballotTrack['IL'] = '';
-            ballotTrack['IN'] = 'This tool does not have voting data for Indiana, <a target="_blank" href="https://www.in.gov/sos/elections/">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['IA'] = 'This tool does not have voting data for Iowa, <a target="_blank" href="https://sos.iowa.gov/elections/voterinformation/index.html">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['KS'] = 'We do not have any information for this location at this time. Please try again later or <a target="_blank" href="https://sos.ks.gov/elections/elections.html">visit your Secretary of State website</a> for more information.';
-            ballotTrack['KY'] = 'This tool does not have voting data for Kentucky, <a target="_blank" href="https://elect.ky.gov/Pages/default.aspx">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['LA'] = 'This tool does not have voting data for Louisiana, <a target="_blank" href="https://www.sos.la.gov/ElectionsAndVoting/Pages/default.aspx">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['ME'] = 'We do not have any information for this location at this time. Please try again later or <a target="_blank" href="https://www.maine.gov/sos/">visit your Secretary of State website</a> for more information.';
-            ballotTrack['MD'] = '';
-            ballotTrack['MA'] = 'This tool does not have voting data for Massachusetts, <a target="_blank" href="https://www.sec.state.ma.us/ele/">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['MI'] = 'We do not have any information for this location at this time. Please try again later or <a target="_blank" href="https://www.michigan.gov/sos">visit your Secretary of State website</a> for more information.';
-            ballotTrack['MN'] = '';
-            ballotTrack['MO'] = 'This tool does not have voting data for Missouri, <a target="_blank" href="https://www.sos.mo.gov/elections">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['MT'] = 'This tool does not have voting data for Montana, <a target="_blank" href="https://sosmt.gov/elections/">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['NE'] = '';
-            ballotTrack['NV'] = 'We do not have any information for this location at this time. Please try again later or <a target="_blank" href="https://www.nvsos.gov/sos">visit your Secretary of State website</a> for more information.';
-            ballotTrack['NJ'] = 'This tool does not have voting data for New Jersey, <a target="_blank" href="https://www.state.nj.us/state/elections/vote.shtml">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['NM'] = '';
-            ballotTrack['NY'] = 'This tool does not have voting data for New York, <a target="_blank" href="https://www.elections.ny.gov/">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['NC'] = '';
-            ballotTrack['ND'] = '';
-            ballotTrack['OH'] = '';
-            ballotTrack['OK'] = '';
-            ballotTrack['PA'] = 'We do not have any information for this location at this time. Please try again later or <a target="_blank" href="https://www.dos.pa.gov/Pages/default.aspx">visit your Secretary of State website</a> for more information.';
-            ballotTrack['RI'] = '';
-            ballotTrack['SC'] = 'This tool does not have voting data for South Carolina, <a target="_blank" href="https://scvotes.gov/">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['SD'] = '';
-            ballotTrack['TN'] = 'This tool does not have voting data for Tennessee, <a target="_blank" href="https://sos.tn.gov/elections">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['TX'] = 'This tool does not have voting data for Texas, <a target="_blank" href="https://www.sos.state.tx.us/elections/">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['VT'] = '';
-            ballotTrack['VA'] = '';
-            ballotTrack['WV'] = 'This tool does not have voting data for West Virginia, <a target="_blank" href="https://sos.wv.gov/elections/Pages/default.aspx">please visit the Secretary of State website</a> for information on how to vote.';
-            ballotTrack['WI'] = 'This tool does not have information for this location at this time. Please visit <a target="_blank" href="https://myvote.wi.gov/en-us/Find-My-Polling-Place">https://myvote.wi.gov/en-us/Find-My-Polling-Place</a> to find your voting locations.';
-            ballotTrack['WY'] = '';
+            var ballotTrack = [];            
+            ballotTrack['AK'] = 'We do not have information for this location at this time. Please try again later, or visit the <a href="https://myvoterinformation.alaska.gov/" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['AZ'] = 'We do not have any information for this location at this time. Please try again later, or visit your <a href="https://azsos.gov/elections/about-elections/county-election-officials-contact-information" target="_blank">county website</a> to find your early voting location.';
+            ballotTrack['AR'] = 'We do not have any information for this location at this time. Please visit the <a href="https://www.sos.arkansas.gov/elections" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['CA'] = 'California only offers early in-person voting in select counties. Please visit the <a href="https://www.sos.ca.gov/elections/voting-info/ways-vote" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['CT'] = 'We do not have any information for this location at this time. Please visit the <a href="https://portal.ct.gov/SOTS/Common-Elements/V5-Template---Redesign/Elections--Voting--Home-Page" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['DE'] = 'We do not have any information for this location at this time. Please visit the <a href="https://elections.delaware.gov/" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['DC'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool" target="_blank">Board of Elections website</a> for information on where and how to vote.';
+            ballotTrack['FL'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://dos.fl.gov/elections/for-voters/voting/early-voting-and-secure-ballot-intake-stations/" target="_blank">Secretary of State website</a> to find information on where and how to vote.';
+            ballotTrack['GA'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://mvp.sos.ga.gov/s/" target="_blank">Georgia My Voter Page</a> for information on how to vote.';
+            ballotTrack['HI'] = 'We do not have any information for this location at this time. Please visit the <a href="https://elections.hawaii.gov/voter-service-centers-and-places-of-deposit/" target="_blank">Secretary of State website</a> for information on where and how to vote.';
+            ballotTrack['ID'] = 'We do not have any information for this location at this time. Please visit the <a href="https://voteidaho.gov/idaho-general-election/" target="_blank">Secretary of State website</a> for information on where and how to vote.';
+            ballotTrack['IL'] = 'We do not have any information for this location at this time. Please visit the <a href="https://elections.il.gov/votingandregistrationsystems/EarlyVotingLocationsSearch.aspx" target="_blank">Secretary of State website</a> for information on where and how to vote.';
+            ballotTrack['IN'] = 'We do not have any information for this location at this time. Please visit the <a href="https://www.in.gov/sos/elections/voter-information/ways-to-vote/" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['IA'] = 'We do not have any information for this location at this time. Please visit the <a href="https://sos.iowa.gov/elections/voterinformation/index.html" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['KS'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://sos.ks.gov/elections/important-election-information.html" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['KY'] = 'We do not have any information for this location at this time. Please visit the <a href="https://elect.ky.gov/Pages/default.aspx" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['LA'] = 'We do not have any information for this location at this time. Please visit the <a href="https://www.sos.la.gov/ElectionsAndVoting/Vote/VoteEarly/Pages/default.aspx" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['ME'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.maine.gov/portal/government/edemocracy/voter_lookup.php" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['MD'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href=""https://elections.maryland.gov/elections/2024/2024%20Early%20Voting%20Centers%20v1.pdf" target="_blank">State Board of Elections website</a> for information on where and how to vote.';
+            ballotTrack['MA'] = 'We do not have any information for this location at this time. Please visit the <a href="https://www.sec.state.ma.us/ele/" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['MI'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://mvic.sos.state.mi.us/Voter/Index#early-voting-search-section" target="_blank">Michigan Voter Information Center</a> for information on where and how to vote.';
+            ballotTrack['MN'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.sos.state.mn.us/elections-voting/other-ways-to-vote/voting-locations-before-election-day/" target="_blank">Secretary of State website</a> to find information on where and how to vote.';
+            ballotTrack['MO'] = 'We do not have any information for this location at this time. Please visit the <a href="https://www.sos.mo.gov/elections" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['MT'] = 'We do not have any information for this location at this time. Please visit the <a href="https://sosmt.gov/elections/" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['NE'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.votercheck.necvr.ne.gov/VoterView/" target="_blank">Secretary of State website</a> to find information on where and how to vote.';
+            ballotTrack['NV'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.nvsos.gov/votersearch/index.aspx" target="_blank">Secretary of State website</a> to find information on where and how to vote.';
+            ballotTrack['NJ'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.state.nj.us/state/elections/vote.shtml" target="_blank">Secretary of State website</a> for information on where and how to vote.';
+            ballotTrack['NM'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://voterportal.servis.sos.state.nm.us/WhereToVoteAddress.aspx" target="_blank">Voter Information Portal</a> for information on where and how to vote.';
+            ballotTrack['NY'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.elections.ny.gov/" target="_blank">Board of Elections website</a> for information on how to vote.';
+            ballotTrack['NC'] = 'We do not have information for this location at this time. Please try again later, or visit the <a href="https://vt.ncsbe.gov/evsite/" target="_blank">Secretary of State website</a> for information on where and how to vote.';
+            ballotTrack['ND'] = 'This tool does not have information for North Dakota. Please visit the <a href="https://vip.sos.nd.gov/WhereToVote.aspx?tab=AddressandVotingTimes" target="_blank">Secretary of State website</a> for more information.';
+            ballotTrack['OH'] = 'We do not have information for this location at this time. Please try again later, or visit the <a href="https://www.ohiosos.gov/elections/voters/toolkit/early-voting/" target="_blank">Secretary of State website</a> for information on where and how to vote.';
+            ballotTrack['OK'] = 'This tool does not have information for Oklahoma. Please visit the <a href="https://okvoterportal.okelections.gov/" target="_blank">Oklahoma Voter Portal</a> for information on where and how to vote.';
+            ballotTrack['PA'] = 'We do not have any information for this location at this time. Please try again later, or visit the <a href="https://www.pavoterservices.pa.gov/Pages/SurePortalHome.aspx" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['RI'] = 'We do not have any information for this location at this time. Please visit the <a href="https://vote.sos.ri.gov/Home/PollingPlaces?ActiveFlag=2" target="_blank">Secretary of State website</a> for information on where and how to vote.';
+            ballotTrack['SC'] = 'We do not have any information for this location at this time. Please visit the <a href="https://scvotes.gov/voters/early-voting/" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['SD'] = 'We do not have any information for this location at this time. Please visit the <a href="https://vip.sdsos.gov/viplogin.aspx" target="_blank">Secretary of State website</a> for information on where and how to vote.';
+            ballotTrack['TN'] = 'We do not have information for this location at this time. Please try again later, or visit the <a href="https://web.go-vote-tn.elections.tn.gov/" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['TX'] = 'We do not have any information for this location at this time. Please visit the <a href="https://www.sos.state.tx.us/elections/" target="_blank">Secretary of State website</a> for information on how to vote.';
+            ballotTrack['VT'] = 'This tool does not have voting data for Vermont. Please visit the <a href="https://mvp.vermont.gov/" target="_blank">Secretary of State website</a> for information on where and how to vote.';
+            ballotTrack['VA'] = 'We do not have information for this location at this time. Please try again later, or visit the <a href="https://www.elections.virginia.gov/casting-a-ballot/early-voting-office-locations/" target="_blank">Secretary of State website</a> for more information.';
+            ballotTrack['WV'] = 'We do not have any information for this location at this time. Please visit the <a href="https://sos.wv.gov/elections/Pages/GoVoteWV.aspx" target="_blank">Secretary of State website</a> for information and where and how to vote.';
+            ballotTrack['WI'] = 'We do not have information for this location at this time. Please try again later, or visit the <a href="https://myvote.wi.gov/en-us/Vote-Absentee-In-Person" target="_blank">Secretary of State website</a> for information on where and how to vote.';
+            ballotTrack['WY'] = 'We do not have any information for this location at this time. Please visit the <a href="https://myelectionday.sos.wyo.gov/WYVOTES/Pages/VOSearch.aspx" target="_blank">Secretary of State website</a> for information on where and how to vote.';
 
             // No early voting
             var noEarlyVoting = [];
-            noEarlyVoting['AL'] = 'Alabama does not offer early voting. Please visit <a target="_blank" href="https://www.sos.alabama.gov/alabama-votes">the Secretary of State website</a> to find information on how to vote.';
-            noEarlyVoting['CO'] = 'Colorado does not offer in-person early voting. Eligible voters will be mailed ballots. Please <a target="_blank" href="https://www.sos.state.co.us/pubs/elections/main.html?menuheaders=5">visit the Secretary of State website</a> for more information.';
-            noEarlyVoting['CT'] = 'Connecticut does not offer early voting. Please visit <a target="_blank" href="https://portal.ct.gov/SOTS/Common-Elements/V5-Template---Redesign/Elections--Voting--Home-Page"the Secretary of State website</a> to find information on how to vote.';
-            noEarlyVoting['MS'] = 'Mississippi does not offer early voting. Please visit <a target="_blank" href="https://www.sos.ms.gov/elections-voting">the Secretary of State website</a> to find information on how to vote.';
-            noEarlyVoting['NH'] = 'New Hampshire does not offer early voting. Please visit <a href="_blank" href="https://www.sos.nh.gov/elections/voters">the Secretary of State website</a> to find information on how to vote.';
-            noEarlyVoting['OR'] = 'Oregon does not offer in-person early voting. Eligible voters will be mailed ballots. Please visit <a href="_blank" href="https://sos.oregon.gov/voting-elections/Pages/default.aspx">the Secretary of State website</a> for more information.';
-            noEarlyVoting['UT'] = 'Utah does not offer in-person early voting. Eligible voters will be mailed ballots. Please visit <a href="_blank" href="https://vote.utah.gov/">the Secretary of State website</a> for more information.';
-            noEarlyVoting['WA'] = 'Washington does not offer in-person early voting. Eligible voters will be mailed ballots. Please visit <a href="_blank" href="https://www.sos.wa.gov/elections/">the Secretary of State website</a> for more information.';
-                        
+            ballotTrack['CO'] = 'Colorado does not offer in-person early voting. Eligible voters will be mailed ballots. Please visit the <a href="https://www.sos.state.co.us/pubs/elections/main.html?menuheaders=5" target="_blank">Secretary of State website</a> for more information.';
+            ballotTrack['AL'] = 'Alabama does not offer early voting. Please visit the <a href="https://myinfo.alabamavotes.gov/voterview" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['NH'] = 'New Hampshire does not offer early voting. Please visit the <a href="https://www.sos.nh.gov/elections/voters" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['MS'] = 'Mississippi does not offer early voting. Please visit the <a href="https://www.sos.ms.gov/elections-voting" target="_blank">Secretary of State website</a> to find information on how to vote.';
+            ballotTrack['OR'] = 'Oregon does not offer in-person early voting. All eligible voters in Oregon will be mailed ballots. Please visit the <a href="https://sos.oregon.gov/voting-elections/Pages/default.aspx" target="_blank">Secretary of State website</a> for more information on how to vote.';
+            ballotTrack['UT'] = 'Utah does not offer in-person early voting. Eligible voters will be mailed ballots. Please visit the <a href="https://votesearch.utah.gov/voter-search/search/search-by-address/how-and-where-can-i-vote" target="_blank">Secretary of State website</a> for more information.';
+            ballotTrack['WA'] = 'Washington does not offer in-person early voting. Eligible voters will be mailed ballots. Please visit the <a href="https://voter.votewa.gov/portal2023/login.aspx" target="_blank">Secretary of State website</a> for more information.';
+
             /**
              * Address Autocomplete
              */
@@ -468,43 +468,6 @@
                         endDay = '';
                         hoursDisplay = '',
                         openHoursRow = false;
-                    /*
-                    if(hoursData.length){
-                        for (i = 0; i < hoursData.length; i++) {                    
-                            
-                            var lastOpen = hoursData[0].open,
-                                lastClose = hoursData[0].close;
-
-                            // First Day
-                            if(i == 0 || openHoursRow == false){
-                                hoursDisplay += '<div class="hours"><strong>' + hoursData[i].day;
-                                openHoursRow = true;
-                                lastDay = hoursData[i].day;
-                            }
-                            
-                            // Check if next day is different
-                            var next = i + 1;
-                            if( next < hoursData.length && lastOpen != hoursData[next].open || 
-                                next < hoursData.length && lastClose != hoursData[next].close || 
-                                i == hoursData.length - 1 && openHoursRow == true
-                            ){  
-                                if(hoursData[i].day != lastDay){
-                                    hoursDisplay += ' - ' + hoursData[i].day;
-                                }
-                                var closing = '';
-                                if(hoursData[i].close != ''){
-                                    closing = ' to ' + hoursData[i].close;
-                                }
-                                hoursDisplay += '</strong>: ' + hoursData[i].open +''+ closing + '</div>';
-                                openHoursRow = false;
-                            }
-
-                            lastOpen = hoursData[i].open;
-                            lastClose = hoursData[i].close;
-                        }
-                    }
-                    */
-
 
                     // Directions
                     var directions = '<a class="btn-small" target="_blank" href="https://www.google.com/maps/place/'+encodeURI(item.address_line_1+' '+item.city+' '+item.state+' '+item.zip)+'">Get Directions</a>';
@@ -653,252 +616,99 @@
                                 //console.log(results);
 
                                 if( state_abbrev && lat && lng ){
+                                
+                                    $.ajax({
+                                        type: "POST",
+                                        dataType: "jsonp",
+                                        url: "https://www.googleapis.com/civicinfo/v2/voterinfo?key=<?php echo $google_api_key; ?>&electionId=<?php echo $election_id; ?>",
+                                        data: formData,
+                                        success: function(data) {
+                                            
+                                            console.log(data);
 
-                                    //if( state_abbrev == 'MI'){
+                                            if(data.error){
 
-                                        /**
-                                         * Michigan Override
-                                         */
-                                        $.ajax({
-                                            type: "POST",
-                                            dataType: "jsonp",
-                                            url: "https://www.googleapis.com/civicinfo/v2/voterinfo?key=<?php echo $google_api_key; ?>&electionId=<?php echo $election_id; ?>",
-                                            data: formData,
-                                            success: function(data) {
-                                                
-                                                console.log(data);
+                                                $('#ev-lookup .message').addClass('error').html('<p>The entered address is invalid, please double check and try again!</p>');
 
-                                                if(data.error){
+                                            } else {
 
-                                                    $('#ev-lookup .message').addClass('error').html('<p>The entered address is invalid, please double check and try again! [MI]</p>');
-
-                                                } else {
-
-                                                    // No errors lets go
-                                                    $('#result-map').fadeIn();
-
-                                                    // Clear any previous results
-                                                    $('#result-location').html('');
-                                                    deleteMarkers();
-                                                    counter = 1;
-
-                                                    // Pre set map bounds
-                                                    bounds = new google.maps.LatLngBounds();
-
-                                                    // Ballot Drop off Locations
-                                                    var dropHtml = '',
-                                                        ballotTrackCheck = '';
-                                                    if(ballotTrack[data.normalizedInput.state]){
-                                                        ballotTrackCheck = '<p class="ballot-track content-row--bright-green p-4">'+ballotTrack[data.normalizedInput.state]+'</p>'
-                                                    }
-
-                                                    // General election info for the state
-                                                    if(data.state){
-                                                        var electionAdmins = data.state;
-                                                        var stateHtml = '<h5>'+data.state[0].name+' Voting Information</h5>';
-                                                        
-                                                        if(ballotTrack[data.normalizedInput.state]){
-                                                            stateHtml += ballotTrackCheck;
-                                                        }
-                                                        
-                                                        if(!data.dropOffLocations){
-                                                            stateHtml += '<p>No locations came up in our search; please check your state\'s election site for more information.</p>';
-                                                        }
-                                                        stateHtml += electionAdmins.map(electionAdminsTable).join('');
-                                                        $('#result-location').append(stateHtml);
-                                                    }
-
-                                                    //console.log(data);
-                                                    if(data.earlyVoteSites){
-                                                        var dropOffLocations = data.earlyVoteSites;                          
-                                                        dropHtml += '<h5>Your Early Voting Locations</h5>';
-                                                        
-                                                        dropHtml += '<table id="table-dropoff"><tr><th class="counter-cell">#</th><th>Address</th><th>Dates</th><th>Polling Hours</th></tr>';
-                                                        dropHtml += dropOffLocations.map(earlyLocationsTableGoogle).join('');
-                                                        dropHtml += '</table>';
-                                                        $('#result-location').append(dropHtml);
-                                                    } else {
-                                                        if(ballotTrack[data.state[0].name]){
-                                                            dropHtml += ballotTrackCheck;
-                                                            //$('#result-location').append(dropHtml);
-                                                        }
-                                                    }
-
-
-                                                    // Update map center
-                                                    var geocoder = new google.maps.Geocoder();
-                                                    geocoder.geocode( { 'address': addressVal}, function(results, status) {
-                                                        if (status == 'OK') {
-                                                            map.setCenter(results[0].geometry.location);
-                                                            //addMarker(results[0].geometry.location, map, 'home');
-                                                            addMarker(results[0].geometry.location, map, 'home', '', '', null, bounds);
-                                                        }
-                                                    });
-
-                                                    // Update map center
-                                                    var latNe = Math.round(bounds.getNorthEast().lat());
-                                                    var latSw = Math.round(bounds.getSouthWest().lat());
-                                                    if (latNe == latSw) {
-                                                        var extendPoint1 = new google.maps.LatLng(bounds.getNorthEast().lat()+0.2, bounds.getNorthEast().lng()+0.2);
-                                                        var extendPoint2 = new google.maps.LatLng(bounds.getNorthEast().lat()-0.2, bounds.getNorthEast().lng()-0.2);
-                                                        bounds.extend(extendPoint1);
-                                                        bounds.extend(extendPoint2);
-                                                    }
-                                                    map.fitBounds(bounds);
-                                                    map.panToBounds(bounds);
-                                                    
-                                                    markerCluster = new MarkerClusterer(map, markers, {
-                                                        imagePath: "https://voterparticipation.org/wp-content/themes/voterparticipationcenter/assets/img/m",
-                                                    });                              
-
-                                                    $('#ev-lookup').prop('disabled',false).removeClass('loading');
-                                                    
-                                                }
-                                            },
-                                            error: function (request, status, error) {
-                                                console.error(request.responseText);
-                                            }
-
-                                        });
-                                                
-                                    //} else {
-
-                                        /**
-                                         * Every Other State
-                                         */
-                                        $.ajax({
-                                            url: "https://api.civicengine.com/polling_places",
-                                            data: { 
-                                                longitude:          lng,
-                                                latitude:           lat,
-                                                election_id:        <?php echo $election_id; ?>,                                            
-                                                street_number:      address_components['street_number'],
-                                                pre_directional:    address_components['pre_directional'],
-                                                street_name:        address_components['street_name'],
-                                                city:               address_components['city'],
-                                                state:              address_components['state'],
-                                                zipcode:            address_components['zipcode'],
-                                                street_suffix:      address_components['street_suffix'],
-                                                post_directional:   address_components['post_directional']
-                                            },
-                                            type: "GET",
-                                            headers: { 'x-api-key': '<?php echo $ballotpedia_api_key; ?>' },
-                                            success: function(data) {
-                                                
-                                                console.log(data);
-
-                                                // No errors, lets go!
+                                                // No errors lets go
                                                 $('#result-map').fadeIn();
 
                                                 // Clear any previous results
                                                 $('#result-location').html('');
                                                 deleteMarkers();
+                                                counter = 1;
 
-                                                // General vars
-                                                var counter = 1,
-                                                    bounds = new google.maps.LatLngBounds(), // Pre-set map bounds
-                                                    earlyHtml = '',// Ballot Drop off Locations
-                                                    dayOfHtml = '',// Election Day Locations
-                                                    ballotTrackCheck = '',
-                                                    earlyVoteCheck = '';
+                                                // Pre set map bounds
+                                                bounds = new google.maps.LatLngBounds();
 
-
-                                                if(ballotTrack[state_abbrev] && !data.results.early_voting.length){
-                                                    if(ballotTrack[state_abbrev] != ''){
-                                                        //console.log('Check 1');
-                                                        ballotTrackCheck = '<p class="ballot-track content-row--bright-green p-4">'+ballotTrack[state_abbrev]+'</p>';
-                                                    } else {
-                                                        //console.log('Check 2');
-                                                        ballotTrackCheck = '<p class="ballot-track content-row--bright-green p-4">This tool does not have voting data for '+state_long+', please visit <a href="'+ballotTrack[state_abbrev]+'" target="_blank">'+ballotTrack[state_abbrev]+'</a> for information.</p>';
-                                                    }
-                                                }
-                                                if(noEarlyVoting[state_abbrev]){
-                                                    earlyVoteCheck = '<p class="ballot-track content-row--bright-green p-4">'+noEarlyVoting[state_abbrev]+'</p>';
+                                                // Ballot Drop off Locations
+                                                var dropHtml = '',
+                                                    earlytHtml = '',
+                                                    ballotTrackCheck = '';
+                                                if(ballotTrack[data.normalizedInput.state]){
+                                                    ballotTrackCheck = '<p class="ballot-track content-row--bright-green p-4">'+ballotTrack[data.normalizedInput.state]+'</p>'
+                                                } else {
+                                                    ballotTrackCheck = '<p class="ballot-track content-row--bright-green p-4">No locations came up in our search; please check your state\'s election site for more information.</p>';
                                                 }
 
-                                                // console.log('noEarlyVoting[state_abbrev]: ', noEarlyVoting[state_abbrev]);
-                                                // console.log('Early Voting: ', data.results.early_voting.length);
-                                                // console.log('State Abbreviation: ', state_abbrev);
-                                                // console.log('ballotTrack: ', ballotTrack[state_abbrev]);
-                                                // console.log('ballotTrackCheck: ', ballotTrackCheck);
-                                                // console.log('earlyVoteCheck: ', earlyVoteCheck);
-
-                                                // Early voting data
-                                                if(data.results.early_voting.length > 0){
-                                                    earlyHtml += '<h5>Your Early Voting Locations</h5>';
-
-                                                    if(ballotTrack[state_abbrev]){
-                                                        //console.log('Ballot track here');
-                                                        earlyHtml += ballotTrackCheck;
-                                                    }
-                                                    else if(noEarlyVoting[state_abbrev]){
-                                                        //console.log('Early vote check');
-                                                        earlyHtml += earlyVoteCheck;
-                                                    }
+                                                // General election info for the state
+                                                if(data.state){
+                                                    var electionAdmins = data.state;
+                                                    var stateHtml = '<h5>'+data.state[0].name+' Voting Information</h5>';
                                                     
-                                                    // Get all our locations
-                                                    var allLocations = [];
-                                                    allLocations.push.apply(allLocations, data.results.early_voting);
-                                                    //allLocations.push.apply(allLocations, data.results.election_day);
+                                                    if(!data.hasOwnProperty('dropOffLocations') && !data.hasOwnProperty('earlyVoteSites')){
+                                                        stateHtml += ballotTrackCheck;
+                                                    }
+                                                    stateHtml += electionAdmins.map(electionAdminsTable).join('');
+                                                    $('#result-location').append(stateHtml);
+                                                }
 
-                                                    // Split Early Voting and Drop Boxes
+                                                //console.log(data);
+                                                if(data.earlyVoteSites || data.dropOffLocations){
                                                     /*
-                                                    var onlyDropBoxes = allLocations.filter(function( obj ) {
-                                                        return obj.ballot_drop_off == true;
-                                                    });
+                                                    if(data.earlyVoteSites){
+                                                        var earlyVoteSites = data.earlyVoteSites;                          
+                                                        earlytHtml += '<h5>Your Early Voting Locations</h5>';
+                                                        
+                                                        earlytHtml += '<table id="table-early"><tr><th class="counter-cell">#</th><th>Address</th><th>Dates</th><th>Polling Hours</th></tr>';
+                                                        earlytHtml += earlyVoteSites.map(earlyLocationsTableGoogle).join('');
+                                                        earlytHtml += '</table>';
+                                                        $('#result-location').append(earlytHtml);
+                                                    }
                                                     */
-                                                    var onlyEarlyVote = allLocations.filter(function( obj ) {
-                                                        return obj.ballot_drop_off == false;
-                                                    });
 
-
-                                                    var today = new Date();
-                                                    today.setHours(0,0,0,0);
-                                                    var onlyEarlyVote = onlyEarlyVote.filter(function( obj ) {
-                                                        let lastDay = new Date( obj.hours[0].close_at+'Z' );
-                                                        lastDay.setHours(0,0,0,0);
-                                                        return lastDay >= today;
-                                                    });
-
-                                                    // Create the table of locations
-                                                    if(onlyEarlyVote.length > 0){
-                                                        earlyHtml += '<table id="table-early-voting"><tr><th class="counter-cell">#</th><th>Address</th><th>Dates</th><th>Polling Hours</th></tr></table>';       
-                                                        $('#result-location').append(earlyHtml);  
-                                                        onlyEarlyVote.forEach(earlyLocationsTable);
-                                                    } else {
-                                                        if(ballotTrackCheck){
-                                                            earlyHtml += ballotTrackCheck;
-                                                            $('#result-location').append(earlyHtml);
-                                                        } 
-                                                        else if(earlyVoteCheck){
-                                                            earlyHtml += earlyVoteCheck;
-                                                            $('#result-location').append(earlyHtml);
-                                                        } else {
-                                                            if(ballotTrack[state_abbrev] != ''){
-                                                                $('#result-location').append('<p class="ballot-track content-row--bright-green p-4">'+ballotTrack[state_abbrev]+'</p>');                                                                
-                                                            } else {
-                                                                $('#result-location').append('<p class="ballot-track content-row--bright-green p-4">We do not have any information for this location at this time. Please try again later or visit your Secretary of State website for more information.</p>');
-                                                            }
-                                                            
-                                                        }
+                                                    if(data.dropOffLocations){
+                                                        var dropOffLocations = data.dropOffLocations;             
+                                                        earlytHtml += '<h5>Your Early Voting Locations</h5>';
+                                                        
+                                                        dropHtml += '<table id="table-dropoff"><tr><th class="counter-cell">#</th><th>Address</th><th>Dates</th><th>Polling Hours</th></tr>';
+                                                        dropHtml += dropOffLocations.map(earlyLocationsTableGoogle).join('');
+                                                        dropHtml += '</table>';
+                                                        $('#result-location').append(dropHtml);
                                                     }
                                                     
                                                 } else {
-                                                    if(ballotTrackCheck){
-                                                        earlyHtml += ballotTrackCheck;
-                                                        $('#result-location').append(earlyHtml);
-                                                    } 
-                                                    else if(earlyVoteCheck){
-                                                        earlyHtml += earlyVoteCheck;
-                                                        $('#result-location').append(earlyHtml);
-                                                    } else {
-                                                        $('#result-location').append('<p class="ballot-track content-row--bright-green p-4">We do not have any information for this location at this time. Please try again later or visit your Secretary of State website for more information.</p>');
+                                                    /*
+                                                    if(ballotTrack[data.state[0].name]){
+                                                        dropHtml += ballotTrackCheck;
+                                                        $('#result-location').append(dropHtml);
                                                     }
+                                                    */
                                                 }
-                                                
-                                                map.setCenter(results[0].geometry.location);
-                                                addMarker(results[0].geometry.location, map, 'home', '', '', null, bounds);
-                                                                                                                            
+
+
+                                                // Update map center
+                                                var geocoder = new google.maps.Geocoder();
+                                                geocoder.geocode( { 'address': addressVal}, function(results, status) {
+                                                    if (status == 'OK') {
+                                                        map.setCenter(results[0].geometry.location);
+                                                        //addMarker(results[0].geometry.location, map, 'home');
+                                                        addMarker(results[0].geometry.location, map, 'home', '', '', null, bounds);
+                                                    }
+                                                });
+
                                                 // Update map center
                                                 var latNe = Math.round(bounds.getNorthEast().lat());
                                                 var latSw = Math.round(bounds.getSouthWest().lat());
@@ -916,13 +726,14 @@
                                                 });                              
 
                                                 $('#ev-lookup').prop('disabled',false).removeClass('loading');
-
-                                            },
-                                            error: function (request, status, error) {
-                                                console.error(request.responseText);
+                                                
                                             }
-                                        });
-                                    //}
+                                        },
+                                        error: function (request, status, error) {
+                                            console.error(request.responseText);
+                                        }
+
+                                    });
 
                                 } else {
 
