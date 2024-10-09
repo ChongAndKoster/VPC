@@ -279,6 +279,7 @@ function custom_theme_setup()
                 // The CSS is imported in assets/sass/style.scss
                 wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/vendor/bootstrap/js/bootstrap.bundle.min.js', ['jquery']);
                 wp_enqueue_script('slick-slider-js', get_stylesheet_directory_uri() . '/assets/js/vendor/slick/slick.min.js', ['jquery'], '', true);
+                wp_enqueue_script('utm-keeper-js', get_stylesheet_directory_uri() . '/assets/js/utmkeeper.js', ['jquery'], '1.1', true);
             }
 
             /**
